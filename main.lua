@@ -70,7 +70,8 @@ local files = {
             "frank",
             "crafted",
             "schlitzohr",
-            "hotboxer"
+            "hotboxer",
+            -- "director"
         }, directory = "items/jesters/"
     },
     normalities = {

@@ -248,11 +248,33 @@ function end_round()
     return original_end_round()
 end
 
--- testing for now
 local original_play_sound = play_sound
 function play_sound(sound_code, pitch, vol, stop_previous_instance)
-    if false and G.GAME and G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center and G.GAME.selected_back.effect.center.key == "b_bof_l_wooden" and sound_code == "card1" then
-        sound_code = "woodendeck"
+    if G.GAME and G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center and G.GAME.selected_back.effect.center.key == "b_bof_l_wooden" then
+        if sound_code == "card1" then
+            sound_code = "bof_wooden_1"
+        elseif sound_code == "paper1" then
+            sound_code = "bof_wooden_2"
+            vol = 0.1
+        elseif sound_code == "cardSlide1" or sound_code == "cardSlide2" then
+            sound_code = "bof_wooden_3"
+        elseif sound_code == "cardFan2" then
+            sound_code = "bof_wooden_4"
+        end
     end
     return original_play_sound(sound_code, pitch, vol, stop_previous_instance)
+end
+
+local original_card_set_sprites = Card.set_sprites
+function Card:set_sprites(_center, _front)
+    original_card_set_sprites(self, _center, _front)
+    if G.GAME and G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center and G.GAME.selected_back.effect.center.key == "b_bof_l_wooden" and self.config.center and self.config.center.set == "Default" and self.children then
+        if self.children.center then self.children.center:remove() end
+        self.children.center = SMODS.create_sprite(self.T.x, self.T.y, self.T.w, self.T.h, "bof_wooden", { x = 0, y = 0 })
+        self.children.center.states.hover = self.states.hover
+        self.children.center.states.click = self.states.click
+        self.children.center.states.drag = self.states.drag
+        self.children.center.states.collide.can = false
+        self.children.center:set_role({major = self, role_type = "Glued", draw_major = self})
+    end
 end

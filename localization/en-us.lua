@@ -1,6 +1,7 @@
 return {
     descriptions = {
         Joker = {
+            -- Appetizers
             j_bof_a_dragonfruit = {
                 name = "Dragonfruit",
                 text = {
@@ -83,6 +84,7 @@ return {
                     "{C:attention}Mult Cards{} or {C:attention}Lucky Cards"
                 }
             },
+            -- Jesters
             j_bof_j_hal = {
                 name = "Hatty Hal",
                 text = {
@@ -311,6 +313,15 @@ return {
                     "{C:attention}copy{} to deck or destroy it"
                 }
             },
+            -- j_bof_j_director = {
+            --     name = "Director",
+            --     text = {
+            --         "{C:white,X:mult}X#1#{} Mult, retriggers",
+            --         "{C:attention}once{} for every card in",
+            --         "played hand that {C:attention}retriggered"
+            --     }
+            -- },
+            -- Normalities
             j_bof_n_notebook = {
                 name = "Notebook",
                 text = {
@@ -349,7 +360,7 @@ return {
                 text = {
                     "{X:mult,C:white}X#1#{} Mult every",
                     "{C:attention}other{} hand",
-                    "{C:inactive}#2#", -- see: loyalty card
+                    "{C:inactive,E:bof_alarm}#2#",
                 }
             },
             j_bof_n_passport = {
@@ -366,6 +377,7 @@ return {
                     }
                 }
             },
+            -- Fables
             j_bof_f_narr = {
                 name = "Narr",
                 text = {
@@ -657,15 +669,18 @@ return {
             bof_inactive = "Inactive...",
             bof_ready = "Ready!",
             k_bof_destroyed = "Destroyed!",
-            k_bof_ring = "Ring Ring!",
-            k_bof_alarm = "Alarm Set!", -- return things use title capitalization, i believe
+            k_bof_alarm = "Alarm Set!",
             k_bof_downgrade = "Downgrade!",
             k_bof_sticker_applied = "Sticker Applied!",
 
             option_bof_appetizers = "Appetizers",
             option_bof_jesters = "Jesters",
             option_bof_normalities = "Normalities",
-            option_bof_fables = "Fables"
+            option_bof_fables = "Fables",
+            option_bof_flats = "Flats",
+            -- option_bof_enemies = "Enemies",
+            -- option_bof_finishers = "Finishers",
+            -- option_bof_coupons = "Coupons"
         }
     }
 }

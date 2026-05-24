@@ -1,0 +1,35 @@
+-- SMODS.Joker {
+--     key = "j_director",
+--     name = "Director",
+--     config = { extra = { xmult = 1.2 } },
+--     pos = { x = 5, y = 4 },
+--     cost = 7,
+--     rarity = 2,
+--     atlas = "joker",
+--     loc_vars = function(self, info_queue, card)
+--         return { vars = { card.ability.extra.xmult } }
+--     end,
+--     calculate = function(self, card, context)
+--         if context.repetition and context.cardarea == G.play and context.other_card then
+--             if not card.ability.extra.retriggered_cards then
+--                 card.ability.extra.retriggered_cards = {}
+--             end
+--             if not card.ability.extra.retriggered_cards[context.other_card] then
+--                 card.ability.extra.retriggered_cards[context.other_card] = true
+--             end
+--         end
+--         if context.joker_main then
+--             local retrigger_count = 0
+--             if card.ability.extra.retriggered_cards then
+--                 for _ in pairs(card.ability.extra.retriggered_cards) do
+--                     retrigger_count = retrigger_count + 1
+--                 end
+--             end
+--             card.ability.extra.retriggered_cards = nil
+--             return {
+--                 xmult = card.ability.extra.xmult,
+--                 repetitions = retrigger_count,
+--             }
+--         end
+--     end
+-- }
