@@ -36,7 +36,7 @@ SMODS.Joker {
                     xmult = card.ability.extra.xmult,
                     message = "X" .. card.ability.extra.xmult .. " Mult",
                     colour = G.C.MULT,
-                    sound = "bof_alarm_ring",
+                    sound = BundlesOfFun.config.custom_sounds and "bof_alarm_ring" or "multhit2",
                     remove_default_message = true
                 }
             elseif not card.ability.extra.active and not context.blueprint then
@@ -49,7 +49,7 @@ SMODS.Joker {
                 juice_card_until(card, eval, true)
                 return {
                     message = localize("k_bof_alarm"),
-                    sound = "bof_alarm_wind"
+                    sound = BundlesOfFun.config.custom_sounds and "bof_alarm_wind" or nil
                 }
             end
         end

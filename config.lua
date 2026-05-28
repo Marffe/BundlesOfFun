@@ -6,5 +6,6 @@ return {
         fables = true,
         flats = true,
         fish = true
-    }
+    },
+    custom_sounds = true
 }

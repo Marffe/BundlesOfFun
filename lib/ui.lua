@@ -25,39 +25,12 @@ SMODS.current_mod.config_tab = function()
             colour = G.C.BLACK,
         },
         nodes = {
-            { n = G.UIT.R, config = { align = "cm" }, nodes = {
-                { n = G.UIT.O, config = { object = DynaText({
-                    string = { "WARNING" },
-                    colours = { SMODS.Gradients.warning_text },
-                    scale = 1,
-                    shadow = true,
-                    emboss = 0.05,
-                    bump = true
-                })}}
-            }},
-            { n = G.UIT.R, config = { align = "cm" }, nodes = {
-                { n = G.UIT.T, config = { text = "Continuing a run after disabling a set may crash the game!", scale = 0.4, colour = G.C.RED, shadow = true } }
-            }},
             { n = G.UIT.R, config = { align = "cm", padding = 0.2 }, nodes = {
-                { n = G.UIT.C, config = { align = "cm", minw = 5 }, nodes = {
-                    bundle_toggle("appetizers", G.C.bof_appetizers),
-                    bundle_toggle("jesters", G.C.bof_jesters),
-                    bundle_toggle("normalities", G.C.bof_normalities),
-                }},
-                { n = G.UIT.C, config = { align = "cm", minw = 5 }, nodes = {
-                    bundle_toggle("fables", G.C.bof_fables),
-                    bundle_toggle("flats", G.C.bof_flats),
-                    -- bundle_toggle("coupons", G.C.bof_coupons),
-                    bundle_toggle("fish", G.C.SET.Fish),
-                    -- bundle_toggle("enemies", G.C.bof_enemies),
-                    -- bundle_toggle("finishers", G.C.bof_finishers),
-                }}
-            }},
-            { n = G.UIT.R, config = { align = "cm" }, nodes = {
-                { n = G.UIT.T, config = { text = "Changes require a restart", scale = 0.5, colour = G.C.WHITE, shadow = true } }
-            }},
-            { n = G.UIT.R, config = { align = "cm", padding = 0 }, nodes = {
-                { n = G.UIT.T, config = { text = "(Some items only appear if multiple sets are enabled)", scale = 0.3, colour = G.C.WHITE, shadow = true } }
+                create_toggle {
+                    label = "Custom Sounds",
+                    ref_table = BundlesOfFun.config,
+                    ref_value = "custom_sounds",
+                },
             }},
         }
     }
@@ -94,6 +67,56 @@ glitch = SMODS.Gradient {
 
 SMODS.current_mod.extra_tabs = function()
     return {
+        {
+            label = "Bundles",
+            tab_definition_function = function()
+                return {
+                    n = G.UIT.ROOT,
+                    config = {
+                        emboss = 0.05,
+                        minh = 6,
+                        r = 0.1,
+                        minw = 10,
+                        align = "cm",
+                        padding = 0.3,
+                        colour = G.C.BLACK,
+                    },
+                    nodes = {
+                        { n = G.UIT.R, config = { align = "cm" }, nodes = {
+                            { n = G.UIT.O, config = { object = DynaText({
+                                string = { "WARNING" },
+                                colours = { SMODS.Gradients.warning_text },
+                                scale = 1,
+                                shadow = true,
+                                emboss = 0.05,
+                                bump = true
+                            })}}
+                        }},
+                        { n = G.UIT.R, config = { align = "cm" }, nodes = {
+                            { n = G.UIT.T, config = { text = "Continuing a run after disabling a set may crash the game!", scale = 0.4, colour = G.C.RED, shadow = true } }
+                        }},
+                        { n = G.UIT.R, config = { align = "cm", padding = 0.2 }, nodes = {
+                            { n = G.UIT.C, config = { align = "cm", minw = 5 }, nodes = {
+                                bundle_toggle("appetizers", G.C.bof_appetizers),
+                                bundle_toggle("jesters", G.C.bof_jesters),
+                                bundle_toggle("normalities", G.C.bof_normalities),
+                            }},
+                            { n = G.UIT.C, config = { align = "cm", minw = 5 }, nodes = {
+                                bundle_toggle("fables", G.C.bof_fables),
+                                bundle_toggle("flats", G.C.bof_flats),
+                                bundle_toggle("fish", G.C.SET.Fish),
+                            }}
+                        }},
+                        { n = G.UIT.R, config = { align = "cm" }, nodes = {
+                            { n = G.UIT.T, config = { text = "Changes require a restart", scale = 0.5, colour = G.C.WHITE, shadow = true } }
+                        }},
+                        { n = G.UIT.R, config = { align = "cm", padding = 0 }, nodes = {
+                            { n = G.UIT.T, config = { text = "(Some items only appear if multiple sets are enabled)", scale = 0.3, colour = G.C.WHITE, shadow = true } }
+                        }},
+                    }
+                }
+            end
+        },
         {
             label = "Credits",
             tab_definition_function = function()
