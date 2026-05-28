@@ -36,43 +36,37 @@ SMODS.Atlas({
 SMODS.Sound({
 	key = "wooden_1",
 	path = "wooden_1.ogg",
-	loop = false,
-	volume = 0.5,
+	loop = false
 })
 
 SMODS.Sound({
 	key = "wooden_2",
 	path = "wooden_2.ogg",
-	loop = false,
-	volume = 0.5,
+	loop = false
 })
 
 SMODS.Sound({
 	key = "wooden_3",
 	path = "wooden_3.ogg",
-	loop = false,
-	volume = 0.5,
+	loop = false
 })
 
 SMODS.Sound({
 	key = "wooden_4",
 	path = "wooden_4.ogg",
-	loop = false,
-	volume = 0.1,
+	loop = false
 })
 
 SMODS.Sound({
 	key = "alarm_ring",
 	path = "alarm_ring.ogg",
-	loop = false,
-	volume = 0.5,
+	loop = false
 })
 
 SMODS.Sound({
 	key = "alarm_wind",
 	path = "alarm_wind.ogg",
-	loop = false,
-	volume = 0.5,
+	loop = false
 })
 
 -- SMODS.DynaTextEffect {
