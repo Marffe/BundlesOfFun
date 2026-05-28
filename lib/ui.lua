@@ -26,7 +26,14 @@ SMODS.current_mod.config_tab = function()
         },
         nodes = {
             { n = G.UIT.R, config = { align = "cm" }, nodes = {
-                { n = G.UIT.T, config = { text = "WARNING", scale = 1, colour = SMODS.Gradients.warning_text, shadow = true, emboss = 0.05 } }
+                { n = G.UIT.O, config = { object = DynaText({
+                    string = { "WARNING" },
+                    colours = { SMODS.Gradients.warning_text },
+                    scale = 1,
+                    shadow = true,
+                    emboss = 0.05,
+                    bump = true
+                })}}
             }},
             { n = G.UIT.R, config = { align = "cm" }, nodes = {
                 { n = G.UIT.T, config = { text = "Continuing a run after disabling a set may crash the game!", scale = 0.4, colour = G.C.RED, shadow = true } }
@@ -68,6 +75,23 @@ local function bof_credit_description(description)
     }}
 end
 
+george = SMODS.Gradient{
+    key = "george_the_rat",
+    colours = {
+        G.C.bof_george_1,
+        G.C.bof_george_2
+    },
+    cycle = 5
+}
+glitch = SMODS.Gradient {
+    key = "glitchkat10",
+    colours = {
+        G.C.bof_glitch_1,
+        G.C.bof_glitch_2
+    },
+    cycle = 5
+}
+
 SMODS.current_mod.extra_tabs = function()
     return {
         {
@@ -86,28 +110,38 @@ SMODS.current_mod.extra_tabs = function()
                     },
                     nodes = {
                         { n = G.UIT.R, config = { align = "cm", padding = 0.3 }, nodes = {
-                            { n = G.UIT.T, config = { text = "Bundles Of Fun", scale = 1.2, colour = G.C.GOLD, shadow = true, emboss = 0.05 } }
+                            { n = G.UIT.O, config = { object = DynaText({
+                                string = { { string = "Bundles Of Fun" } },
+                                colours = { G.C.GOLD },
+                                scale = 1.5,
+                                shadow = true,
+                                emboss = 0.05,
+                                float = true,
+                                pop_in = 0.1
+                            })}}
                         }},
                         { n = G.UIT.R, config = { align = "cm", padding = 0.2 }, nodes = {
                             { n = G.UIT.C, config = { align = "cm", minw = 5 }, nodes = {
                                 { n = G.UIT.R, config = { align = "cm", padding = 0.2 }, nodes = {
                                     { n = G.UIT.T, config = { text = "Creators", scale = 0.45, colour = G.C.WHITE, shadow = true } }
                                 }},
-                                bof_credit_title("George The Rat", "Creator", G.C.GREEN),
-                                bof_credit_description("All art, most ideas, and very minimal code"),
-                                bof_credit_title("Glitchkat10", "Co-Creator", G.C.PLASMA),
+                                bof_credit_title("George The Rat", "Creator", george),
+                                bof_credit_description("All art, most ideas,"),
+                                bof_credit_title("Glitchkat10", "Co-Creator", glitch),
                                 bof_credit_description("Many ideas, nearly all code"),
                             }},
                             { n = G.UIT.C, config = { align = "cm", minw = 5 }, nodes = {
                                 { n = G.UIT.R, config = { align = "cm", padding = 0.2 }, nodes = {
                                     { n = G.UIT.T, config = { text = "Contributors", scale = 0.45, colour = G.C.WHITE, shadow = true } }
                                 }},
-                                bof_credit_title("wingedcatgirl", "Coder", G.C.SO_1.Hearts),
+                                bof_credit_title("wingedcatgirl", "Coder", G.C.SET.Fish),
                                 bof_credit_description("Technical code and UI"),
                                 bof_credit_title("CodeRevo", "Coder", G.C.STAKES[6]),
                                 bof_credit_description("Some Jokers' code"),
                                 bof_credit_title("Marffe", "Coder & Localizer", G.C.ORANGE),
                                 bof_credit_description("Fixed bugs and translated to Spanish"),
+                                bof_credit_title("Sophe", "Coder", G.C.SECONDARY_SET.Enhanced),
+                                bof_credit_description("Lightning Deck"),
                             }}
                         }}
                     }
