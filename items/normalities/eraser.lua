@@ -3,6 +3,7 @@ SMODS.Joker {
     name = "Eraser",
     config = { extra = { mult = 2 } },
     pos = { x = 6, y = 3 },
+    pixel_size = { w = 57 },
     cost = 4,
     rarity = 1,
     blueprint_compat = true,

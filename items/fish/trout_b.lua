@@ -1,8 +1,9 @@
 SMODS.Consumable {
-    key = "i_trout_l",
-    name = "Rainbow Trout Large",
+    key = "i_trout_b",
+    name = "Rainbow Trout Big",
     set = "Fish",
-    pos = { x = 1, y = 0 },
+    pools = { ["fish_b"] = true },
+    pos = { x = 1, y = 1 },
     config = {
         extra = {
             xmult = 1.5,
@@ -35,7 +36,7 @@ SMODS.Consumable {
                 xmult = card.ability.extra.xmult
             }
         end
-        if context.end_of_round and context.main_eval then
+        if context.end_of_round and context.main_eval and not context.repetition then
             if card.ability.extra.rounds_remaining > 0 then
                 card.ability.extra.rounds_remaining = card.ability.extra.rounds_remaining - 1
                 return {

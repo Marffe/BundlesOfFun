@@ -285,7 +285,7 @@ function Back:apply_to_run()
     end
 end
 
--- wooden deck effect cont. & config handling
+-- wooden deck effect cont.
 local atpref = SMODS.add_to_pool
 SMODS.add_to_pool = function (prototype_obj, args)
     if G.GAME and G.GAME.starting_params and (G.GAME.starting_params.wooden_no_aces or G.GAME.starting_params.no_aces) then
@@ -293,21 +293,8 @@ SMODS.add_to_pool = function (prototype_obj, args)
             return false
         end
     end
-    local bundle, bundle_inactive, prefix
-    local item_key = prototype_obj.key
-    local category_map = {
-        a = "appetizers",
-        f = "fables",
-        j = "jesters",
-        n = "normalities"
-    }
-    if item_key:sub(1,6) == "j_bof_" then
-        prefix = item_key:sub(7, 7)
-        bundle = category_map[prefix]
-        bundle_inactive = not (G.GAME.bof_bundles and G.GAME.bof_bundles[bundle or "AAAAA"])
-    end
     local original_result = atpref(prototype_obj, args)
-    return not (bundle and bundle_inactive) and original_result
+    return original_result
 end
 
 -- soapy/wooden deck unlock

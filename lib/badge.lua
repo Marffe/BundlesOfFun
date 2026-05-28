@@ -5,7 +5,8 @@ local badge_gradient = SMODS.Gradient{
         G.C.bof_fables,
         G.C.bof_jesters,
         G.C.bof_normalities,
-        G.C.bof_flats
+        G.C.bof_flats,
+        G.C.SET.Fish
     }
 }
 
@@ -17,7 +18,8 @@ local CATEGORIES = {
     f = { name = "Fables", color_idx = 2 },
     j = { name = "Jesters", color_idx = 3 },
     n = { name = "Normalities", color_idx = 4 },
-    l = { name = "Flats", color_idx = 5 }
+    l = { name = "Flats", color_idx = 5 },
+    i = { name = "Fish", color_idx = 6 }
 }
 
 local function create_category_badge(category_key)

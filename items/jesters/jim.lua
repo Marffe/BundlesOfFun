@@ -9,6 +9,7 @@ SMODS.Joker {
         }
     },
     pos = { x = 0, y = 1 },
+    pixel_size = { w = 65 },
     cost = 6,
     rarity = 2,
     blueprint_compat = true,

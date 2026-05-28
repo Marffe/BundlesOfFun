@@ -1,22 +1,22 @@
 SMODS.Consumable {
-    key = "i_trout_s",
-    name = "Rainbow Trout Small",
+    key = "i_bass_s",
+    name = "Largemouth Bass Small",
     set = "Fish",
     pools = { ["fish_s"] = true },
-    pos = { x = 0, y = 1 },
+    -- pos = { x = 0, y = 0 },
     config = {
         extra = {
-            xmult = 1.25,
+            chips = 30,
             slots = 1,
             rounds_remaining = 2
         }
     },
     cost = 4,
-    atlas = "consumable",
+    atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.xmult,
+                card.ability.extra.chips,
                 card.ability.extra.slots,
                 card.ability.extra.rounds_remaining
             }
@@ -33,7 +33,7 @@ SMODS.Consumable {
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                xmult = card.ability.extra.xmult
+                chips = card.ability.extra.chips
             }
         end
         if context.end_of_round and context.main_eval and not context.repetition then

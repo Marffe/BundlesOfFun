@@ -447,8 +447,8 @@ return {
                         "{C:inactive}(Must have room)"
                     },
                     {
-                        "Create a random {C:small}Small {C:fish}Fish{} when {C:attention}Blind{} is selected",
-                        "and a random {C:big}Large {C:fish}Fish{} when {C:attention}Blind{} is defeated",
+                        "Create a random {C:white,X:small}Small{} {C:fish}Fish{} when {C:attention}Blind{} is selected",
+                        "and a random {C:white,X:big}Large{} {C:fish}Fish{} when {C:attention}Blind{} is defeated",
                         "if this is the {C:attention}rightmost{} Joker",
                         "{C:inactive}(Must have room)"
                     }
@@ -590,18 +590,66 @@ return {
             -- }
         },
         Fish = {
+            c_bof_i_bass_s = {
+                name = "Largemouth Bass {X:small}Small",
+                text = {
+                    "{C:chips}+#1#{} Chips and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_bass_b = {
+                name = "Largemouth Bass {X:big}Big",
+                text = {
+                    "{C:chips}+#1#{} Chips and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_betta_s = {
+                name = "Betta {X:small}Small",
+                text = {
+                    "{C:mult}+#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_betta_b = {
+                name = "Betta {X:big}Big",
+                text = {
+                    "{C:mult}+#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
             c_bof_i_trout_s = {
-                name = "Rainbow Trout {C:small,X:bg_gray}Small",
+                name = "Rainbow Trout {X:small}Small",
                 text = {
                     "{C:white,X:mult}X#1#{} Mult and",
                     "{C:attention}+#2#{} consumable slot while held",
                     "{C:inactive}#3# rounds remaining..."
                 }
             },
-            c_bof_i_trout_l = {
-                name = "Rainbow Trout {C:big,X:bg_gray}Large",
+            c_bof_i_trout_b = {
+                name = "Rainbow Trout {X:big}Big",
                 text = {
                     "{C:white,X:mult}X#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_goldfish_s = {
+                name = "Goldfish {X:small}Small",
+                text = {
+                    "Earn {C:money}$#1#{} and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_goldfish_b = {
+                name = "Goldfish {X:big}Big",
+                text = {
+                    "Earn {C:money}$#1#{} and",
                     "{C:attention}+#2#{} consumable slot while held",
                     "{C:inactive}#3# rounds remaining..."
                 }

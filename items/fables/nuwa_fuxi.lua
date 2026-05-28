@@ -52,11 +52,11 @@ SMODS.Joker {
                     trigger = "after",
                     delay = 0.4,
                     func = function()
-                        if G.consumeables.config.card_limit - #G.consumeables.cards >= 1 then
+                        if G.consumeables.config.card_limit - #G.consumeables.cards >= 0 then
                             play_sound("timpani")
                             card:juice_up(0.3, 0.5)
                             SMODS.add_card({
-                                set = "Fish",
+                                set = "fish_s",
                                 key_append = "f_nuwa_fuxi"
                             })
                         end
@@ -73,8 +73,7 @@ SMODS.Joker {
                             play_sound("timpani")
                             card:juice_up(0.3, 0.5)
                             SMODS.add_card({
-                                set = "Fish",
-                                edition = "e_negative",
+                                set = "fish_b",
                                 key_append = "f_nuwa_fuxi"
                             })
                         end

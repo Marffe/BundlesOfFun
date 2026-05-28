@@ -1,8 +1,10 @@
 return {
     bundles = {
         appetizers = true,
-        fables = true,
         jesters = true,
-        normalities = true
+        normalities = true,
+        fables = true,
+        flats = true,
+        fish = true
     }
 }

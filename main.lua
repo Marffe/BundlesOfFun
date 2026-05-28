@@ -20,7 +20,6 @@ loc_colour()
 G.ARGS.LOC_COLOURS.plasma = { 0.8, 0.45, 0.85, 1 }
 G.ARGS.LOC_COLOURS.small = HEX("3a55ab")
 G.ARGS.LOC_COLOURS.big = HEX("e0a23a")
-G.ARGS.LOC_COLOURS.bg_gray = HEX("8F9596")
 
 local files = NFS.getDirectoryItemsInfo(SMODS.current_mod.path .. "/lib")
 for i = 1, #files do
@@ -91,7 +90,6 @@ local files = {
             "turold",
             "taillefer",
             "dagonet",
-            "nuwa_fuxi"
         }, directory = "items/fables/"
     },
     flats = {
@@ -110,8 +108,14 @@ local files = {
     },
     fish = {
         list = {
+            "bass_s",
+            "bass_b",
+            "betta_s",
+            "betta_b",
             "trout_s",
-            "trout_l"
+            "trout_b",
+            "goldfish_s",
+            "goldfish_b",
         }, directory = "items/fish/"
     },
     -- coupons = {
@@ -130,28 +134,47 @@ local files = {
     -- }
 }
 
-for _, name in ipairs(files["appetizers"].list) do
-    assert(SMODS.load_file(files["appetizers"].directory .. name .. ".lua"))()
+-- todo: make it so that a custom message appears instructing the player to enable all bundles if the game crashes due to the fact that a required one is disabled
+
+if BundlesOfFun.config.bundles.appetizers then
+    for _, name in ipairs(files["appetizers"].list) do
+        assert(SMODS.load_file(files["appetizers"].directory .. name .. ".lua"))()
+    end
 end
 
-for _, name in ipairs(files["jesters"].list) do
-    assert(SMODS.load_file(files["jesters"].directory .. name .. ".lua"))()
+if BundlesOfFun.config.bundles.jesters then
+    for _, name in ipairs(files["jesters"].list) do
+        assert(SMODS.load_file(files["jesters"].directory .. name .. ".lua"))()
+    end
 end
 
-for _, name in ipairs(files["normalities"].list) do
-    assert(SMODS.load_file(files["normalities"].directory .. name .. ".lua"))()
+if BundlesOfFun.config.bundles.normalities then
+    for _, name in ipairs(files["normalities"].list) do
+        assert(SMODS.load_file(files["normalities"].directory .. name .. ".lua"))()
+    end
 end
 
-for _, name in ipairs(files["fables"].list) do
-    assert(SMODS.load_file(files["fables"].directory .. name .. ".lua"))()
+if BundlesOfFun.config.bundles.fables then
+    for _, name in ipairs(files["fables"].list) do
+        assert(SMODS.load_file(files["fables"].directory .. name .. ".lua"))()
+    end
 end
 
-for _, name in ipairs(files["flats"].list) do
-    assert(SMODS.load_file(files["flats"].directory .. name .. ".lua"))()
+if BundlesOfFun.config.bundles.flats then
+    for _, name in ipairs(files["flats"].list) do
+        assert(SMODS.load_file(files["flats"].directory .. name .. ".lua"))()
+    end
 end
 
-for _, name in ipairs(files["fish"].list) do
-    assert(SMODS.load_file(files["fish"].directory .. name .. ".lua"))()
+if BundlesOfFun.config.bundles.fish then
+    for _, name in ipairs(files["fish"].list) do
+        assert(SMODS.load_file(files["fish"].directory .. name .. ".lua"))()
+    end
+end
+
+-- nuwa & fuxi only load if both fish and fables are enabled
+if BundlesOfFun.config.bundles.fables and BundlesOfFun.config.bundles.fish then
+    assert(SMODS.load_file(files["fables"].directory .. "nuwa_fuxi.lua"))()
 end
 
 -- for _, name in ipairs(files["coupons"].list) do
