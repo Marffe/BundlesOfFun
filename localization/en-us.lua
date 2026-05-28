@@ -436,6 +436,26 @@ return {
                 unlock = {
                     "{E:1,s:1.3}?????",
                 }
+            },
+            j_bof_f_nuwa_fuxi = {
+                name = "Nüwa & Fuxi",
+                text = {
+                    {
+                        "Create a random {C:tarot}Tarot{} card when {C:attention}Blind{} is selected",
+                        "and a random {C:dark_edition}Negative {C:tarot}Tarot{} card when {C:attention}Blind{} is defeated",
+                        "if this is the {C:attention}leftmost{} Joker",
+                        "{C:inactive}(Must have room)"
+                    },
+                    {
+                        "Create a random {C:small}Small {C:fish}Fish{} when {C:attention}Blind{} is selected",
+                        "and a random {C:big}Large {C:fish}Fish{} when {C:attention}Blind{} is defeated",
+                        "if this is the {C:attention}rightmost{} Joker",
+                        "{C:inactive}(Must have room)"
+                    }
+                },
+                unlock = {
+                    "{E:1,s:1.3}?????",
+                }
             }
         },
         Back = {
@@ -569,6 +589,24 @@ return {
             --     }
             -- }
         },
+        Fish = {
+            c_bof_i_trout_s = {
+                name = "Rainbow Trout {C:small,X:bg_gray}Small",
+                text = {
+                    "{C:white,X:mult}X#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_trout_l = {
+                name = "Rainbow Trout {C:big,X:bg_gray}Large",
+                text = {
+                    "{C:white,X:mult}X#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            }
+        },
         -- Voucher = {
         --     v_bof_dark_alley = {
         --         name = "Dark Alley",
@@ -664,20 +702,23 @@ return {
     },
     misc = {
         dictionary = {
+            b_fish_cards = "Fish Cards",
             k_bof_nom = "Nom!",
-            bof_active = "Active!",
-            bof_inactive = "Inactive...",
-            bof_ready = "Ready!",
+            k_bof_active = "Active!",
+            k_bof_inactive = "Inactive...",
+            k_bof_ready = "Ready!",
             k_bof_destroyed = "Destroyed!",
             k_bof_alarm = "Alarm Set!",
             k_bof_downgrade = "Downgrade!",
             k_bof_sticker_applied = "Sticker Applied!",
+            k_fish = "Fish",
 
             option_bof_appetizers = "Appetizers",
             option_bof_jesters = "Jesters",
             option_bof_normalities = "Normalities",
             option_bof_fables = "Fables",
             option_bof_flats = "Flats",
+            option_bof_fish = "Fish",
             -- option_bof_enemies = "Enemies",
             -- option_bof_finishers = "Finishers",
             -- option_bof_coupons = "Coupons"

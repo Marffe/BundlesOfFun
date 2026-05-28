@@ -1,3 +1,99 @@
+-- make it so that fish cards cannot be used
+local G_UIDEF_use_and_sell_buttons_ref = G.UIDEF.use_and_sell_buttons
+function G.UIDEF.use_and_sell_buttons(card)
+    local abc = G_UIDEF_use_and_sell_buttons_ref(card)
+    local sell = nil
+    if (card.area == G.consumeables and card.ability.set == "Fish") then 
+        sell = {
+            n = G.UIT.C,
+            config = { align = "cm" },
+            nodes = {
+                {
+                    n = G.UIT.C,
+                    config = {
+                        ref_table = card,
+                        align = "cm",
+                        padding = 0.1,
+                        r = 0.08,
+                        minw = 1.25,
+                        hover = true,
+                        shadow = true,
+                        colour = G.C.UI.BACKGROUND_INACTIVE,
+                        one_press = true,
+                        button = "sell_card",
+                        func = "can_sell_card",
+                        handy_insta_action = "sell",
+                    },
+                    nodes = {
+                        { n = G.UIT.B, config = { w = 0.1, h = 0.6 } },
+                        {
+                            n = G.UIT.C,
+                            config = { align = "tm" },
+                            nodes = {
+                                {
+                                    n = G.UIT.R,
+                                    config = { align = "cm", maxw = 1.25 },
+                                    nodes = {
+                                        {
+                                            n = G.UIT.T,
+                                            config = {
+                                                text = localize("b_sell"),
+                                                colour = G.C.UI.TEXT_LIGHT,
+                                                scale = 0.4,
+                                                shadow = true,
+                                            },
+                                        },
+                                    },
+                                },
+                                {
+                                    n = G.UIT.R,
+                                    config = { align = "cm" },
+                                    nodes = {
+                                        {
+                                            n = G.UIT.T,
+                                            config = {
+                                                text = localize("$"),
+                                                colour = G.C.WHITE,
+                                                scale = 0.4,
+                                                shadow = true,
+                                            },
+                                        },
+                                        {
+                                            n = G.UIT.T,
+                                            config = {
+                                                ref_table = card,
+                                                ref_value = "sell_cost_label",
+                                                colour = G.C.WHITE,
+                                                scale = 0.55,
+                                                shadow = true,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        return {
+            n = G.UIT.ROOT,
+            config = { padding = 0, colour = G.C.CLEAR },
+            nodes = {
+                {
+                    n = G.UIT.C,
+                    config = { padding = 0.1, align = "cm" },
+                    nodes = {
+                        { n = G.UIT.R, config = { align = "cm" }, nodes = { sell } }
+                    },
+                },
+            },
+        }
+    end
+    return abc
+end
+
+-- apple core logic
 local getchip = Card.get_chip_bonus
 function Card:get_chip_bonus()
 	local flags = {}
@@ -15,6 +111,7 @@ function Card:get_chip_bonus()
 	end
 end
 
+-- make tumor tom unable to be sold when there isn't enough room in joker slots
 local can_sell_card_old = G.FUNCS.can_sell_card
 G.FUNCS.can_sell_card = function(e)
 	local card = e.config.ref_table
@@ -31,6 +128,7 @@ G.FUNCS.can_sell_card = function(e)
 	end
 end
 
+-- eureka logic
 SMODS.Booster:take_ownership_by_kind("Arcana", {
         create_card = function(self, card, i)
             local _card
@@ -69,6 +167,7 @@ SMODS.Booster:take_ownership_by_kind("Arcana", {
         end
 }, true)
 
+-- eureka logic cont.
 SMODS.Booster:take_ownership_by_kind("Celestial", {
     update_pack = function(self, dt)
         local state_wasnt_complete = not G.STATE_COMPLETE
@@ -135,6 +234,7 @@ SMODS.Booster:take_ownership_by_kind("Celestial", {
     end
 }, true)
 
+-- eureka logic cont.
 SMODS.Booster:take_ownership_by_kind("Spectral", {
     create_card = function(self, card, i)
 		local _card
@@ -185,6 +285,7 @@ function Back:apply_to_run()
     end
 end
 
+-- wooden deck effect cont. & config handling
 local atpref = SMODS.add_to_pool
 SMODS.add_to_pool = function (prototype_obj, args)
     if G.GAME and G.GAME.starting_params and (G.GAME.starting_params.wooden_no_aces or G.GAME.starting_params.no_aces) then
@@ -242,12 +343,14 @@ function Card:remove()
     return original_card_remove(self)
 end
 
+-- wooden deck unlock cont.
 local original_end_round = end_round
 function end_round()
     G.GAME.bof_wooden_destroyed = 0
     return original_end_round()
 end
 
+-- wooden deck card sounds
 local original_play_sound = play_sound
 function play_sound(sound_code, pitch, vol, stop_previous_instance)
     if G.GAME and G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center and G.GAME.selected_back.effect.center.key == "b_bof_l_wooden" then
@@ -265,6 +368,7 @@ function play_sound(sound_code, pitch, vol, stop_previous_instance)
     return original_play_sound(sound_code, pitch, vol, stop_previous_instance)
 end
 
+-- wooden deck custom card centers
 local original_card_set_sprites = Card.set_sprites
 function Card:set_sprites(_center, _front)
     original_card_set_sprites(self, _center, _front)
@@ -285,7 +389,7 @@ function Card:set_sprites(_center, _front)
     end
 end
 
--- hook calculate_repetitions for director functionality (currently tracks all triggers and i can't get it to be otherwise)
+-- director logic (currently tracks all triggers and i can't get it to be otherwise)
 -- local oldsmodscalculaterepetitions = SMODS.calculate_repetitions
 -- SMODS.calculate_repetitions = function(card, context, reps)
 --     card.bof_retriggered = nil

@@ -20,6 +20,7 @@ loc_colour()
 G.ARGS.LOC_COLOURS.plasma = { 0.8, 0.45, 0.85, 1 }
 G.ARGS.LOC_COLOURS.small = HEX("3a55ab")
 G.ARGS.LOC_COLOURS.big = HEX("e0a23a")
+G.ARGS.LOC_COLOURS.bg_gray = HEX("8F9596")
 
 local files = NFS.getDirectoryItemsInfo(SMODS.current_mod.path .. "/lib")
 for i = 1, #files do
@@ -89,7 +90,8 @@ local files = {
             "manqian",
             "turold",
             "taillefer",
-            "dagonet"
+            "dagonet",
+            "nuwa_fuxi"
         }, directory = "items/fables/"
     },
     flats = {
@@ -105,6 +107,12 @@ local files = {
             -- "display",
             -- "lightning"
         }, directory = "items/flats/"
+    },
+    fish = {
+        list = {
+            "trout_s",
+            "trout_l"
+        }, directory = "items/fish/"
     },
     -- coupons = {
     --     list = {
@@ -140,6 +148,10 @@ end
 
 for _, name in ipairs(files["flats"].list) do
     assert(SMODS.load_file(files["flats"].directory .. name .. ".lua"))()
+end
+
+for _, name in ipairs(files["fish"].list) do
+    assert(SMODS.load_file(files["fish"].directory .. name .. ".lua"))()
 end
 
 -- for _, name in ipairs(files["coupons"].list) do

@@ -43,7 +43,7 @@ SMODS.Joker {
         if context.end_of_round and not context.blueprint and not card.ability.extra.active then
             card.ability.extra.active = true
             return {
-                message = localize("bof_ready")
+                message = localize("k_bof_ready")
             }
         end
     end

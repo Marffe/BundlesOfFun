@@ -1,5 +1,3 @@
--- TODO: make it so that items do not appear in the collection when their config is disabled
-
 local function bundle_toggle(item, colour)
     return { n = G.UIT.R, config = { align = "cm" }, nodes = {
         create_toggle{
@@ -99,3 +97,4 @@ SMODS.current_mod.extra_tabs = function()
         }
     }
 end
+

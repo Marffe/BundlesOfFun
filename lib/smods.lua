@@ -27,6 +27,13 @@ SMODS.Atlas({
 })
 
 SMODS.Atlas({
+    key = "consumable", 
+    path = "consumable.png", 
+    px = 71,
+    py = 95,
+})
+
+SMODS.Atlas({
     key = "wooden", 
     path = "wooden.png", 
     px = 71,
@@ -77,6 +84,16 @@ SMODS.Sound({
 --         letter.r = math.sin((G.TIMERS.REAL + index)*(25 + index*3)) * 0.1
 --     end
 -- }
+
+SMODS.ConsumableType({
+    key = "Fish",
+    primary_colour = { 1.0, 0.6, 0.7, 1 },
+    secondary_colour = { 0.85, 0.45, 0.55, 1 },
+    collection_rows = { 4, 4 },
+    shop_rate = 0,
+    default = "i_trout_s",
+    no_buy_and_use = true
+})
 
 SMODS.current_mod.optional_features = {
 	retrigger_joker = true
