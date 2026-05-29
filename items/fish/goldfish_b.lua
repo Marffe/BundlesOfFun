@@ -3,7 +3,7 @@ SMODS.Consumable {
     name = "Goldfish Big",
     set = "Fish",
     pools = { ["fish_b"] = true },
-    -- pos = { x = 3, y = 1 },
+    pos = { x = 4, y = 1 },
     config = {
         extra = {
             dollars = 2,
@@ -12,7 +12,7 @@ SMODS.Consumable {
         }
     },
     cost = 6,
-    atlas = "placeholder",
+    atlas = "consumable",
     loc_vars = function(self, info_queue, card)
         return {
             vars = {

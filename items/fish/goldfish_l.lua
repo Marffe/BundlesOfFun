@@ -3,7 +3,7 @@ SMODS.Consumable {
     name = "Goldfish Legendary",
     set = "Fish",
     pools = { ["fish_l"] = true },
-    -- pos = { x = 0, y = 0 },
+    -- pos = { x = 5, y = 1 },
     config = { extra = { slots = 1 } },
     cost = 20,
     hidden = true,

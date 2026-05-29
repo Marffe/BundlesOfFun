@@ -10,6 +10,7 @@ SMODS.Consumable {
         }
     },
     cost = 4,
+    hidden = true,
     atlas = "placeholder",
     loc_vars = function(self, info_queue, card)
         return {

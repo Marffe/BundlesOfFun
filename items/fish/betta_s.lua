@@ -3,7 +3,7 @@ SMODS.Consumable {
     name = "Betta Small",
     set = "Fish",
     pools = { ["fish_s"] = true },
-    -- pos = { x = 2, y = 0 },
+    -- pos = { x = 3, y = 0 },
     config = {
         extra = {
             mult = 4,

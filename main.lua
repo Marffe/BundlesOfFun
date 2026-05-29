@@ -127,6 +127,14 @@ local files = {
             "goldfish_s",
             "goldfish_b",
             "goldfish_l",
+            "tackle_normal_1",
+            "tackle_normal_2",
+            "tackle_jumbo_1",
+            "tackle_jumbo_2",
+            "fry_1",
+            "fry_2",
+            "hooked_1",
+            "hooked_2"
         }, directory = "items/fish/"
     },
     -- coupons = {
