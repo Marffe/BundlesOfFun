@@ -739,7 +739,7 @@ return {
                 text = {
                     "Gives {C:chips}+Chips{} equal to",
                     "the {C:attention}total{} number of chips",
-                    "that {C:attention}all cards{} in deck add to",
+                    "that {C:attention}all cards{} in deck add to,",
                     "{C:attention}+#1#{} consumable slot#<s>1# while held"
                 }
             },
@@ -751,21 +751,21 @@ return {
                     "{C:inactive}#3# rounds remaining..."
                 }
             },
-            c_bof_i_betta_l = {
-                name = "Betta {X:legendary}Legendary",
-                text = {
-                    "Gives {C:mult}+Mult{} equal to",
-                    "the {C:attention}total{} amount of Mult",
-                    "that all {C:attention}poker hands{} add to",
-                    "{C:attention}+#1#{} consumable slot#<s>1# while held"
-                }
-            },
             c_bof_i_betta_b = {
                 name = "Betta {X:big}Big",
                 text = {
                     "{C:mult}+#1#{} Mult and",
                     "{C:attention}+#2#{} consumable slot#<s>2# while held",
                     "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_betta_l = {
+                name = "Betta {X:legendary}Legendary",
+                text = {
+                    "Gives {C:mult}+Mult{} equal to",
+                    "the {C:attention}total{} amount of Mult",
+                    "that all {C:attention}poker hands{} add to,",
+                    "{C:attention}+#1#{} consumable slot#<s>1# while held"
                 }
             },
             c_bof_i_trout_s = {
@@ -811,7 +811,7 @@ return {
                 text = {
                     "Earn money equal to",
                     "the {C:attention}current amount{} of {C:attention}interest",
-                    "that would be earned",
+                    "that would be earned,",
                     "{C:attention}+#1#{} consumable slot#<s>1# while held"
                 }
             }
