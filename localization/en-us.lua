@@ -95,15 +95,14 @@ return {
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chip#<s>3#)"
                 }
             },
-            -- j_bof_j_henry = {
-            --     name = "Handy Henry",
-            --     text = {
-            --         "{C:blue}+#1#{} hand per round",
-            --         "and {C:attention}#2#{} hand size",
-            --         "for every Joker",
-            --         "to the {C:attention}left"
-            --     }
-            -- },
+            j_bof_j_henry = {
+                name = "Handy Henry",
+                text = {
+                    "Earn an additional {C:money}$#1#",
+                    "per {C:attention}remaining {C:blue}Hand{} at",
+                    "the end of each round"
+                }
+            },
             j_bof_j_tom = {
                 name = "Tumor Tom",
                 text = {
@@ -111,15 +110,14 @@ return {
                     "{C:red}-#2#{} consumable slots"
                 }
             },
-            -- j_bof_j_barber = {
-            --     name = "Barber",
-            --     text = {
-            --         "Earn {C:money}$#1#{} at end of round",
-            --         "{C:green}#2# in #3#{} chance to",
-            --         "increase {C:money}payout{} by {C:money}$#4#",
-            --         "when {C:attention}Blind{} is selected"
-            --     }
-            -- },
+            j_bof_j_barber = {
+                name = "Barber",
+                text = {
+                    "Destroy a random",
+                    "{C:attention}card{} in deck when",
+                    "{C:attention}Blind{} is selected"
+                }
+            },
             j_bof_j_ballbo = {
                 name = "Ballbo",
                 text = {

@@ -13,13 +13,30 @@ SMODS.Joker {
                 trigger = "after",
                 delay = 0.4,
                 func = function()
+                    play_sound("tarot1")
+                    card:juice_up(0.3, 0.5)
+                    return true
+                end
+            }))
+            G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.4,
+                func = function()
                     G.E_MANAGER:add_event(Event({
                         trigger = "after",
-                        delay = 0.4,
+                        delay = 0.15,
                         func = function()
                             if G.deck and G.deck.cards and #G.deck.cards > 0 then
                                 G.deck.cards[1]:set_ability(G.P_CENTERS.m_lucky)
                             end
+                            return true
+                        end
+                    }))
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.1,
+                        func = function()
+                            play_sound("tarot2", 1, 0.6)
                             return true
                         end
                     }))

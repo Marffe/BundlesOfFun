@@ -53,9 +53,9 @@ local files = {
     jesters = {
         list = {
             "hal",
-            -- "henry", -- todo: change effect
+            "henry",
             "tom",
-            -- "barber", -- todo: change effect
+            "barber",
             "ballbo",
             "rogue",
             "eddrick",
