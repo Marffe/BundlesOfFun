@@ -57,6 +57,7 @@ SMODS.Joker {
                             card:juice_up(0.3, 0.5)
                             SMODS.add_card({
                                 set = "fish_s",
+                                area = G.consumeables,
                                 key_append = "f_nuwa_fuxi"
                             })
                         end
@@ -74,6 +75,7 @@ SMODS.Joker {
                             card:juice_up(0.3, 0.5)
                             SMODS.add_card({
                                 set = "fish_b",
+                                area = G.consumeables,
                                 key_append = "f_nuwa_fuxi"
                             })
                         end
