@@ -529,11 +529,11 @@ return {
     },
     misc = {
         dictionary = {
-            k_bof_saved_by_shrimp = 'Salvado por un delicioso camarón',
-            k_bof_nom = '¡Ñam!',
-            bof_active = '¡Activo!',
-            bof_ready = '¡Listo!',
-            k_bof_destroyed = '¡Destruido!'
+            k_bof_saved_by_shrimp = "Salvado por un delicioso camarón",
+            k_bof_nom = "¡Ñam!",
+            k_bof_active = "¡Activo!",
+            k_bof_ready = "¡Listo!",
+            k_bof_destroyed = "¡Destruido!"
         }
     }
 }

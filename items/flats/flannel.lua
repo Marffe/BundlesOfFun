@@ -9,11 +9,12 @@ SMODS.Back {
 		return { vars = { self.config.mult } }
 	end,
     calculate = function(self, back, context)
-        if context.final_scoring_step then
-            return { mult = 4 }
+        if context.initial_scoring_step then
+            return {
+                mult = 4
+            }
         end
     end,
-    -- Now only checks if any hand had reached 75 base mult even if you never played for any reason
     check_for_unlock = function(self, args)
         if G.GAME and G.GAME.hands then
             for hand_name, hand_data in pairs(G.GAME.hands) do
@@ -23,6 +24,5 @@ SMODS.Back {
                 end
             end
         end
-        return false
     end
 }

@@ -3,7 +3,6 @@ local function cards_above_deck()
     for i = 1, #G.playing_cards do
         b = b + 1
     end
-
     if (a - b) < 0 then
         return -(a - b)
     end

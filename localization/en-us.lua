@@ -1,6 +1,7 @@
 return {
     descriptions = {
         Joker = {
+            -- Appetizers
             j_bof_a_dragonfruit = {
                 name = "Dragonfruit",
                 text = {
@@ -30,7 +31,7 @@ return {
                 name = "Leek",
                 text = {
                     "Increase all {C:attention}listed",
-                    "{C:green,E:1}probabilities{} by {C:green}+#1#,",
+                    "{C:green,E:1}probabilities{} by {C:green}+#1#{},",
                     "decreases by {C:red}-#2#{} when",
                     "a {C:green}probability{} succeeds",
                 }
@@ -46,7 +47,7 @@ return {
             j_bof_a_wonderous_bread = {
                 name = "Wonderous Bread",
                 text = {
-                    "Balance {C:white,X:plasma}#1#%{} of {C:chips}Chips{} and {C:mult}Mult,",
+                    "Balance {C:white,X:plasma}#1#%{} of {C:chips}Chips{} and {C:mult}Mult{},",
                     "decreases by {C:white,X:plasma}-#2#%{} at end of round"
                 }
             },
@@ -83,6 +84,7 @@ return {
                     "{C:attention}Mult Cards{} or {C:attention}Lucky Cards"
                 }
             },
+            -- Jesters
             j_bof_j_hal = {
                 name = "Hatty Hal",
                 text = {
@@ -106,19 +108,18 @@ return {
                 name = "Tumor Tom",
                 text = {
                     "{C:dark_edition}+#1#{} Joker slots",
-                    "{C:attention}Consumable slots{} are",
-                    "set to {C:attention}0",
+                    "{C:red}-#2#{} consumable slots"
                 }
             },
-            j_bof_j_barber = {
-                name = "Barber",
-                text = {
-                    "Earn {C:money}$#1#{} at end of round",
-                    "{C:green}#2# in #3#{} chance to",
-                    "increase {C:money}payout{} by {C:money}$#4#",
-                    "when {C:attention}Blind{} is selected"
-                }
-            },
+            -- j_bof_j_barber = {
+            --     name = "Barber",
+            --     text = {
+            --         "Earn {C:money}$#1#{} at end of round",
+            --         "{C:green}#2# in #3#{} chance to",
+            --         "increase {C:money}payout{} by {C:money}$#4#",
+            --         "when {C:attention}Blind{} is selected"
+            --     }
+            -- },
             j_bof_j_ballbo = {
                 name = "Ballbo",
                 text = {
@@ -148,8 +149,8 @@ return {
                 name = "Super Joker",
                 text = {
                     "{C:blue}+#1#{} hands if {C:attention}Blind{} is",
-                    "not won by final hand,",
-                    "{s:0.8}may only trigger once per round"
+                    "not won by final hand",
+                    "{C:inactive}(May only trigger once per round)"
                 }
             },
             j_bof_j_eureka = {
@@ -162,6 +163,10 @@ return {
                     {
                         "{C:spectral}Spectral Packs{} and {C:planet}Celestial Packs",
                         "may contain {C:tarot}Tarot{} cards"
+                    },
+                    {
+                        "{C:fish}Tackle Packs{} always contain",
+                        "only {C:white,X:big}Big{} {C:fish}Fish{} cards"
                     }
                 }
             },
@@ -311,6 +316,15 @@ return {
                     "{C:attention}copy{} to deck or destroy it"
                 }
             },
+            -- j_bof_j_director = {
+            --     name = "Director",
+            --     text = {
+            --         "{C:white,X:mult}X#1#{} Mult, retriggers",
+            --         "{C:attention}once{} for every card in",
+            --         "played hand that {C:attention}retriggered"
+            --     }
+            -- },
+            -- Normalities
             j_bof_n_notebook = {
                 name = "Notebook",
                 text = {
@@ -349,7 +363,7 @@ return {
                 text = {
                     "{X:mult,C:white}X#1#{} Mult every",
                     "{C:attention}other{} hand",
-                    "{C:inactive}#2#", -- see: loyalty card
+                    "{C:inactive,E:bof_alarm}#2#",
                 }
             },
             j_bof_n_passport = {
@@ -366,6 +380,7 @@ return {
                     }
                 }
             },
+            -- Fables
             j_bof_f_narr = {
                 name = "Narr",
                 text = {
@@ -420,6 +435,41 @@ return {
                     "{C:mult}+#1#{} Mult when scored,",
                     "increases by {C:mult}+#2#{} Mult when",
                     "a {C:attention}Stone Card{} is discarded"
+                },
+                unlock = {
+                    "{E:1,s:1.3}?????",
+                }
+            },
+            j_bof_f_shennong = {
+                name = "Shennong",
+                text = {
+                    {
+                        "{C:attention}Bottommost{} card in deck becomes a",
+                        "{C:attention}Lucky Card{} when {C:attention}Blind{} is selected",
+                    },
+                    {
+                        "All {C:attention}listed {C:green,E:1}probabilities{} are",
+                        "{C:green}guaranteed{} during the {C:attention}Boss Blind{}"
+                    }
+                },
+                unlock = {
+                    "{E:1,s:1.3}?????",
+                }
+            },
+            j_bof_f_nuwa_fuxi = {
+                name = "Nüwa & Fuxi",
+                text = {
+                    {
+                        "Create a random {C:tarot}Tarot{} card when {C:attention}Blind{} is selected",
+                        "and a random {C:dark_edition}Negative {C:tarot}Tarot{} card when {C:attention}Blind{} is defeated",
+                        "if this is the {C:attention}leftmost{} Joker",
+                        "{C:inactive}(Must have room)"
+                    },
+                    {
+                        "Create a random {C:white,X:small}Small{} {C:fish}Fish{} when {C:attention}Blind{} is selected",
+                        "and a random {C:white,X:big}Big{} {C:fish}Fish{} when {C:attention}Blind{} is defeated",
+                        "if this is the {C:attention}rightmost{} Joker"
+                    }
                 },
                 unlock = {
                     "{E:1,s:1.3}?????",
@@ -542,20 +592,20 @@ return {
                     "and {C:attention}Seal{}"
                 }
             },
-            -- b_bof_l_lightning = {
-            --     name = "Lightning Deck",
-            --     text = {
-            --         "{C:attention}Face cards{} start",
-            --         "as {C:attention}Mult Cards",
-            --         "Played cards do not give their",
-            --         "{C:attention}base chips{} when scored"
-            --     },
-            --     unlock = {
-            --         "Win a run",
-            --         "without any {C:mult}Mult{},",
-            --         "{C:white,s:0.8,X:mult}XMult{s:0.8} may still be used"
-            --     }
-            -- }
+            b_bof_l_lightning = {
+                name = "Lightning Deck",
+                text = {
+                    "{C:attention}Face{} cards start",
+                    "as {C:attention}Mult Cards",
+                    "Played cards do not give their",
+                    "{C:attention}base chips{} when scored"
+                },
+                unlock = {
+                    "Win a run",
+                    "without any {C:mult}Mult{},",
+                    "{C:white,s:0.8,X:mult}XMult{s:0.8} may still be used"
+                }
+            }
         },
         -- Voucher = {
         --     v_bof_dark_alley = {
@@ -638,34 +688,190 @@ return {
         --             "or below are {C:attention}free"
         --         }
         --     },
-        --     v_bof_social_engineering = {
-        --         name = "Social Engineering",
-        --         text = {
-        --             "Jokers costing {C:money}$#1#{}",
-        --             "or below are {C:attention}free"
-        --         },
-        --         unlock = {
-        --             "Purchase a Joker costing",
-        --             "{C:attention,E:1}$12{} or more"
-        --         }
+        -- v_bof_social_engineering = {
+        --     name = "Social Engineering",
+        --     text = {
+        --         "Jokers costing {C:money}$#1#{}",
+        --         "or below are {C:attention}free"
+        --     },
+        --     unlock = {
+        --         "Purchase a Joker costing",
+        --         "{C:attention,E:1}$12{} or more"
         --     }
+        -- },
+        -- v_bof_ice_bucket = {
+        --     name = "Ice Bucket",
+        --     text = {
+        --         "{C:fish}Fish{} cards last",
+        --         "an {C:attention}additional{} round"
+        --     }
+        -- },
+        -- v_bof_buried_treasure = {
+        --     name = "Buried Treasure",
+        --     text = {
+        --         "{C:fish}Fish{} cards give an",
+        --         "{C:attention}additional{} consumable slot"
+        --     },
+        --     unlock = {
+        --         "Have at least",
+        --         "{C:attention,E:1}3{} Fish cards"
+        --     }
+        -- }
+        Fish = {
+            c_bof_i_bass_s = {
+                name = "Largemouth Bass {X:small}Small",
+                text = {
+                    "{C:chips}+#1#{} Chips and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_bass_b = {
+                name = "Largemouth Bass {X:big}Big",
+                text = {
+                    "{C:chips}+#1#{} Chips and",
+                    "{C:attention}+#2#{} consumable slot while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_bass_l = {
+                name = "Largemouth Bass {X:legendary}Legendary",
+                text = {
+                    "Gives {C:chips}+Chips{} equal to",
+                    "the {C:attention}total{} number of chips",
+                    "that {C:attention}all cards{} in deck add to,",
+                    "{C:attention}+#1#{} consumable slot#<s>1# while held"
+                }
+            },
+            c_bof_i_betta_s = {
+                name = "Betta {X:small}Small",
+                text = {
+                    "{C:mult}+#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot#<s>2# while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_betta_b = {
+                name = "Betta {X:big}Big",
+                text = {
+                    "{C:mult}+#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot#<s>2# while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_betta_l = {
+                name = "Betta {X:legendary}Legendary",
+                text = {
+                    "Gives {C:mult}+Mult{} equal to",
+                    "the {C:attention}total{} amount of Mult",
+                    "that all {C:attention}poker hands{} add to,",
+                    "{C:attention}+#1#{} consumable slot#<s>1# while held"
+                }
+            },
+            c_bof_i_trout_s = {
+                name = "Rainbow Trout {X:small}Small",
+                text = {
+                    "{C:white,X:mult}X#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot#<s>2# while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_trout_b = {
+                name = "Rainbow Trout {X:big}Big",
+                text = {
+                    "{C:white,X:mult}X#1#{} Mult and",
+                    "{C:attention}+#2#{} consumable slot#<s>2# while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_trout_l = {
+                name = "Rainbow Trout {X:legendary}Legendary",
+                text = {
+                    "Unfinished"
+                }
+            },
+            c_bof_i_goldfish_s = {
+                name = "Goldfish {X:small}Small",
+                text = {
+                    "Earn {C:money}$#1#{} and",
+                    "{C:attention}+#2#{} consumable slot#<s>2# while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_goldfish_b = {
+                name = "Goldfish {X:big}Big",
+                text = {
+                    "Earn {C:money}$#1#{} and",
+                    "{C:attention}+#2#{} consumable slot#<s>2# while held",
+                    "{C:inactive}#3# rounds remaining..."
+                }
+            },
+            c_bof_i_goldfish_l = {
+                name = "Goldfish {X:legendary}Legendary",
+                text = {
+                    "Earn money equal to",
+                    "the {C:attention}current amount{} of {C:attention}interest",
+                    "that would be earned,",
+                    "{C:attention}+#1#{} consumable slot#<s>1# while held"
+                }
+            }
+        },
+        Other = {
+            p_bof_i_tackle_normal = {
+                name = "Tackle Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2# {C:fish}Fish{} cards"
+                }
+            },
+            p_bof_i_tackle_jumbo = {
+                name = "Jumbo Tackle Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2# {C:fish}Fish{} cards"
+                }
+            },
+            p_bof_i_fry = {
+                name = "Fry Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2# {C:white,X:small}Small{} {C:fish}Fish{} cards"
+                }
+            },
+            p_bof_i_hooked = {
+                name = "Hooked Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2# {C:white,X:big}Big{} {C:fish}Fish{} cards"
+                }
+            }
+        }
     },
     misc = {
         dictionary = {
+            b_fish_cards = "Fish Cards",
             k_bof_nom = "Nom!",
-            bof_active = "Active!",
-            bof_inactive = "Inactive...",
-            bof_ready = "Ready!",
+            k_bof_active = "Active!",
+            k_bof_inactive = "Inactive...",
+            k_bof_ready = "Ready!",
             k_bof_destroyed = "Destroyed!",
-            k_bof_ring = "Ring Ring!",
-            k_bof_alarm = "Alarm Set!", -- return things use title capitalization, i believe
+            k_bof_alarm = "Alarm Set!",
             k_bof_downgrade = "Downgrade!",
             k_bof_sticker_applied = "Sticker Applied!",
+            k_bof_tackle = "Tackle Pack",
+            k_bof_fry = "Fry Pack",
+            k_bof_hooked = "Hooked Pack",
+            k_fish = "Fish",
 
             option_bof_appetizers = "Appetizers",
             option_bof_jesters = "Jesters",
             option_bof_normalities = "Normalities",
-            option_bof_fables = "Fables"
+            option_bof_fables = "Fables",
+            option_bof_flats = "Flats",
+            option_bof_fish = "Fish",
+            -- option_bof_enemies = "Enemies",
+            -- option_bof_finishers = "Finishers",
+            -- option_bof_coupons = "Coupons"
         }
     }
 }

@@ -1,3 +1,99 @@
+-- make it so that fish cards cannot be used
+local G_UIDEF_use_and_sell_buttons_ref = G.UIDEF.use_and_sell_buttons
+function G.UIDEF.use_and_sell_buttons(card)
+    local abc = G_UIDEF_use_and_sell_buttons_ref(card)
+    local sell = nil
+    if (card.area == G.consumeables and card.ability.set == "Fish") then 
+        sell = {
+            n = G.UIT.C,
+            config = { align = "cm" },
+            nodes = {
+                {
+                    n = G.UIT.C,
+                    config = {
+                        ref_table = card,
+                        align = "cm",
+                        padding = 0.1,
+                        r = 0.08,
+                        minw = 1.25,
+                        hover = true,
+                        shadow = true,
+                        colour = G.C.UI.BACKGROUND_INACTIVE,
+                        one_press = true,
+                        button = "sell_card",
+                        func = "can_sell_card",
+                        handy_insta_action = "sell",
+                    },
+                    nodes = {
+                        { n = G.UIT.B, config = { w = 0.1, h = 0.6 } },
+                        {
+                            n = G.UIT.C,
+                            config = { align = "tm" },
+                            nodes = {
+                                {
+                                    n = G.UIT.R,
+                                    config = { align = "cm", maxw = 1.25 },
+                                    nodes = {
+                                        {
+                                            n = G.UIT.T,
+                                            config = {
+                                                text = localize("b_sell"),
+                                                colour = G.C.UI.TEXT_LIGHT,
+                                                scale = 0.4,
+                                                shadow = true,
+                                            },
+                                        },
+                                    },
+                                },
+                                {
+                                    n = G.UIT.R,
+                                    config = { align = "cm" },
+                                    nodes = {
+                                        {
+                                            n = G.UIT.T,
+                                            config = {
+                                                text = localize("$"),
+                                                colour = G.C.WHITE,
+                                                scale = 0.4,
+                                                shadow = true,
+                                            },
+                                        },
+                                        {
+                                            n = G.UIT.T,
+                                            config = {
+                                                ref_table = card,
+                                                ref_value = "sell_cost_label",
+                                                colour = G.C.WHITE,
+                                                scale = 0.55,
+                                                shadow = true,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+        return {
+            n = G.UIT.ROOT,
+            config = { padding = 0, colour = G.C.CLEAR },
+            nodes = {
+                {
+                    n = G.UIT.C,
+                    config = { padding = 0.1, align = "cm" },
+                    nodes = {
+                        { n = G.UIT.R, config = { align = "cm" }, nodes = { sell } }
+                    },
+                },
+            },
+        }
+    end
+    return abc
+end
+
+-- apple core logic
 local getchip = Card.get_chip_bonus
 function Card:get_chip_bonus()
 	local flags = {}
@@ -15,6 +111,7 @@ function Card:get_chip_bonus()
 	end
 end
 
+-- make tumor tom unable to be sold when there isn't enough room in joker slots
 local can_sell_card_old = G.FUNCS.can_sell_card
 G.FUNCS.can_sell_card = function(e)
 	local card = e.config.ref_table
@@ -31,6 +128,7 @@ G.FUNCS.can_sell_card = function(e)
 	end
 end
 
+-- eureka logic
 SMODS.Booster:take_ownership_by_kind("Arcana", {
         create_card = function(self, card, i)
             local _card
@@ -45,7 +143,7 @@ SMODS.Booster:take_ownership_by_kind("Arcana", {
                     set = pseudorandom_element(consumeables, pseudoseed("j_bof_j_eureka")).set,
                     area = G.pack_cards,
                     skip_materialize = true,
-                    soulable = false,
+                    soulable = true,
                     key_append = "ar3"
                 }
             elseif G.GAME.used_vouchers.v_omen_globe and pseudorandom("omen_globe") > 0.8 then
@@ -69,6 +167,7 @@ SMODS.Booster:take_ownership_by_kind("Arcana", {
         end
 }, true)
 
+-- eureka logic cont.
 SMODS.Booster:take_ownership_by_kind("Celestial", {
     update_pack = function(self, dt)
         local state_wasnt_complete = not G.STATE_COMPLETE
@@ -135,6 +234,7 @@ SMODS.Booster:take_ownership_by_kind("Celestial", {
     end
 }, true)
 
+-- eureka logic cont.
 SMODS.Booster:take_ownership_by_kind("Spectral", {
     create_card = function(self, card, i)
 		local _card
@@ -185,6 +285,7 @@ function Back:apply_to_run()
     end
 end
 
+-- wooden deck effect cont.
 local atpref = SMODS.add_to_pool
 SMODS.add_to_pool = function (prototype_obj, args)
     if G.GAME and G.GAME.starting_params and (G.GAME.starting_params.wooden_no_aces or G.GAME.starting_params.no_aces) then
@@ -192,21 +293,8 @@ SMODS.add_to_pool = function (prototype_obj, args)
             return false
         end
     end
-    local bundle, bundle_inactive, prefix
-    local item_key = prototype_obj.key
-    local category_map = {
-        a = "appetizers",
-        f = "fables",
-        j = "jesters",
-        n = "normalities"
-    }
-    if item_key:sub(1,6) == "j_bof_" then
-        prefix = item_key:sub(7, 7)
-        bundle = category_map[prefix]
-        bundle_inactive = not (G.GAME.bof_bundles and G.GAME.bof_bundles[bundle or "AAAAA"])
-    end
     local original_result = atpref(prototype_obj, args)
-    return not (bundle and bundle_inactive) and original_result
+    return original_result
 end
 
 -- soapy/wooden deck unlock
@@ -242,6 +330,7 @@ function Card:remove()
     return original_card_remove(self)
 end
 
+-- wooden deck unlock cont.
 local original_end_round = end_round
 function end_round()
     G.GAME.bof_wooden_destroyed = 0
@@ -301,3 +390,53 @@ function CardArea:emplace(card, location, stay_flipped)
     end
     return ret
 end
+
+-- wooden deck card sounds
+local original_play_sound = play_sound
+function play_sound(sound_code, pitch, vol, stop_previous_instance)
+    if BundlesOfFun.config.custom_sounds and G.GAME and G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center and G.GAME.selected_back.effect.center.key == "b_bof_l_wooden" then
+        if sound_code == "card1" then
+            sound_code = "bof_wooden_1"
+        elseif sound_code == "paper1" then
+            sound_code = "bof_wooden_2"
+            vol = 0.1
+        elseif sound_code == "cardSlide1" or sound_code == "cardSlide2" then
+            sound_code = "bof_wooden_3"
+        elseif sound_code == "cardFan2" then
+            sound_code = "bof_wooden_4"
+        end
+    end
+    return original_play_sound(sound_code, pitch, vol, stop_previous_instance)
+end
+
+-- wooden deck custom card centers
+local original_card_set_sprites = Card.set_sprites
+function Card:set_sprites(_center, _front)
+    original_card_set_sprites(self, _center, _front)
+    if G.GAME and G.GAME.selected_back and G.GAME.selected_back.effect and G.GAME.selected_back.effect.center and G.GAME.selected_back.effect.center.key == "b_bof_l_wooden" and self.config.center and self.config.center.set == "Default" and self.children then
+        if self.children.center then
+            self.children.center:remove()
+        end
+        self.children.center = SMODS.create_sprite(self.T.x, self.T.y, self.T.w, self.T.h, "bof_wooden", { x = 0, y = 0 })
+        self.children.center.states.hover = self.states.hover
+        self.children.center.states.click = self.states.click
+        self.children.center.states.drag = self.states.drag
+        self.children.center.states.collide.can = false
+        self.children.center:set_role({
+            major = self,
+            role_type = "Glued",
+            draw_major = self
+        })
+    end
+end
+
+-- director logic (currently tracks all triggers and i can't get it to be otherwise)
+-- local oldsmodscalculaterepetitions = SMODS.calculate_repetitions
+-- SMODS.calculate_repetitions = function(card, context, reps)
+--     card.bof_retriggered = nil
+--     local g = oldsmodscalculaterepetitions(card, context, reps)
+--     if next(g) then
+--         card.bof_retriggered = true
+--     end
+--     return g
+-- end
