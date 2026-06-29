@@ -4,33 +4,34 @@ return {
             j_bof_a_dragonfruit = {
                 name = "Pitahaya",
                 text = {
-                    "Añade una copia permanente de todas",
-                    "las cartas {C:attention}jugadas{} en la siguiente mano a la baraja",
-                    "o destruye todas las cartas de",
-                    "la siguiente mano de póker {C:attention}descartada{}"
+                    "{C:attention}Copia{} todas las cartas en",
+                    "la siguiente mano {C:blue}jugada{},",
+                    "o {C:attention}destruye{} todas las cartas",
+                    "en el siguiente {C:red}descarte{}"
                 }
             },
             j_bof_a_blueberry = {
                 name = "Arándano",
                 text = {
-                    "Cada {C:attention}carta{} en mano",
-                    "gana permanentemente {C:chips}+#1#{} Ficha#<s>1#;",
-                    "disminuye en {C:chips}-#2#{} Ficha#<s>2#",
+                    "Cada {C:attention}carta{} en la mano",
+                    "gana {C:chips}+#1#{} Ficha#<s>1#",
+                    "se reduce en {C:chips}-#2#{} Ficha#<s>2#",
                     "al final de la ronda"
                 }
             },
             j_bof_a_grapes = {
                 name = "Uvas",
                 text = {
-                    "{C:chips}+#1#{} Ficha#<s>1#, {C:mult}+#2#{} Multi, {C:white,X:mult}X#3#{} Multi",
-                    "Se destruye al derrotar una {C:attention}Ciega Jefe{}"
+                    "{C:chips}+#1#{} Ficha#<s>1#, {C:mult}+#2#{} Multi",
+                    "{C:white,X:mult}X#3#{} Multi, se destruye",
+                    "al derrotar una {C:attention}Ciega Jefe{}"
                 }
             },
             j_bof_a_leek = {
                 name = "Puerro",
                 text = {
-                    "Aumenta todas las {C:green,E:1}probabilidades{}",
-                    "{C:attention}listadas{} en {C:green}+#1#{},",
+                    "Aumenta todas las",
+                    "{C:green,E:1}probabilidades{} en {C:green}+#1#{},",
                     "disminuye en {C:red}-#2#{} cuando",
                     "una {C:green}probabilidad{} tiene éxito",
                 }
@@ -38,39 +39,41 @@ return {
             j_bof_a_durian = {
                 name = "Durián",
                 text = {
-                    "Vende este comodín para",
-                    "llenar las ranuras de {C:attention}consumibles{}",
+                    "Vende este comodín para llenar",
+                    "las ranuras de {C:attention}consumibles{}",
                     "con {C:tarot}El Loco{}"
                 }
             },
             j_bof_a_bread = {
-                name = "Pan maravilloso",
+                name = "Pan Maravilloso",
                 text = {
-                    "Equilibra un {C:white,X:plasma}#1#%{} de {C:chips}Fichas{} y {C:mult}Multi{},",
-                    "disminuye en {C:white,X:plasma}-#2#%{} al final de la ronda"
+                    "Balancea un {C:white,X:plasma}#1#%{} de {C:chips}Fichas{}",
+                    "y {C:mult}Multi{}, disminuye en {C:white,X:plasma}-#2#%{}",
+                    "al final de la ronda"
                 }
             },
             j_bof_a_beans = {
                 name = "Grajeas",
                 text = {
-                    "La#<s>1# siguiente#<s>1# {C:attention}#1# Ciega#<s>1#{} omitida#<s>1#",
-                    "crea#<n>1# una {C:attention}Etiqueta de Malabar{}"
+                    "Las siguientes {C:attention}2{}",
+                    "{C:attention}Ciegas{} omitidas crean una",
+                    "{C:attention}Etiqueta de malabar{}",
                 }
             },
             j_bof_a_apple = {
                 name = "Manzana",
                 text = {
                     "Cada carta anotada",
-                    "gana permanentemente {C:mult}+#1#{} Multi,",
-                    "disminuye en {C:mult}-#2#{} Multi",
-                    "al final de la ronda"
+                    "gana {C:mult}+#1#{} Multi",
+                    "se reduce en {C:attention}#2#{} al",
+                    "final de la ronda",
                 }
             },
             j_bof_a_core = {
                 name = "Corazón de manzana",
                 text = {
-                    "Las siguientes {C:attention}#1#{} cartas",
-                    "jugadas dan {C:mult}+#2#{} Multi",
+                    "Las siguientes {C:attention}#1#{}",
+                    "cartas otorgan {C:mult}+#2#{} Multi",
                     "en lugar de anotar"
                 }
             },
@@ -78,41 +81,41 @@ return {
                 name = "Tomate",
                 text = {
                     "Las siguientes {C:attention}#1#{} cartas",
-                    "en mano tienen una probabilidad de",
-                    "{C:green}#2# en #3#{} de convertirse en",
-                    "{C:attention}Cartas Multi{} o {C:attention}Cartas de la Suerte{}"
+                    "en la mano tienen una prob. de",
+                    "{C:green}#2# en #3#{} de volverse cartas",
+                    "{C:attention}Multi{} o {C:attention}de la Suerte{}"
                 }
             },
             j_bof_a_shrimp = {
                 name = "Camarón frito",
                 text = {
-                    "El#<s>1# siguiente#<s>1# {C:attention}#1# Paquete#<s>1# Potenciador#<es>1#{} abierto#<s>1#",
-                    "tiene#<n>1# una carta {C:fish}Pez{} {C:white,X:small}Pequeño{} y una",
-                    "carta {C:fish}Pez{} {C:white,X:big}Grande{} añadidas a su {C:attention}contenido{}"
+                    "Los próximos#<s>2# {C:attention}#1# Paquete#<s>2# Potenciador#<es>1#{}#",
+                    "contienen#<n>1# una carta {C:fish}Pez{} {C:white,X:small}Pequeño{}",
+                    "o {C:white,X:big}Grande{} adicional#<es>1#"
                 }
             },
             j_bof_j_hal = {
                 name = "Sergio Sombredero",
                 text = {
-                    "Este comodín gana {C:chips}+#1#{} Ficha#<s>1# y",
-                    "aumenta su {C:attention}escalado{} en",
-                    "{C:chips}+#2#{} Ficha#<s>2# cuando se añade una",
-                    "{C:attention}carta de juego{} a tu baraja",
-                    "{C:inactive}(Actualmente {C:chips}+#3#{C:inactive} Ficha#<s>3#)"
+                    "Gana {C:chips}+#1#{} Fichas",
+                    "y aumenta en {C:chips}+#2#{} Ficha",
+                    "cada vez que se añade una",
+                    "{C:attention}Carta de juego{} a tu baraja.",
+                    "{C:inactive}(Actualmente {C:chips}+#3#{C:inactive} Fichas)"
                 }
             },
             j_bof_j_henry = {
                 name = "Martín el Manitas",
                 text = {
-                    "Gana {C:money}$#1#{} adicional",
-                    "por cada {C:blue}Mano{} {C:attention}restante{}",
-                    "al final de cada ronda"
+                    "Ganas {C:money}$#1#{} adicional",
+                    "por {C:blue}Mano{} {C:attention}restante{}",
+                    "al final de la ronda"
                 }
             },
             j_bof_j_tom = {
                 name = "Tomás Tumor",
                 text = {
-                    "{C:dark_edition}+#1#{} ranura#<s>1# de comodín,",
+                    "{C:dark_edition}+#1#{} ranura#<s>2# de comodín,",
                     "{C:red}-#2#{} ranura#<s>2# de consumible"
                 }
             },
@@ -120,27 +123,27 @@ return {
                 name = "Barbero",
                 text = {
                     "Al seleccionar una {C:attention}Ciega{},",
-                    "gana {C:mult}+#1#{} Multi y",
-                    "elimina la {C:attention}Mejora{} de",
-                    "{C:attention}#2#{} carta#<s>2# aleatoria#<s>2# de la baraja",
+                    "gana {C:mult}+#1#{} Multi y remueve una",
+                    "{C:attention}Mejora{} de {C:attention}#2#{} carta#<s>2#",
+                    "al azar de tu baraja",
                     "{C:inactive}(Actualmente {C:mult}+#3#{C:inactive} Multi)"
                 }
             },
             j_bof_j_ballbo = {
                 name = "Ballbo",
                 text = {
-                    "Este comodín gana {C:mult}+#1#{} Multi y",
-                    "aumenta su {C:attention}escalado{} en {C:mult}+#2#{} Multi",
-                    "si la mano jugada contiene un {C:attention}Color{}",
+                    "Oana {C:mult}+#1#{} Multi y aumenta su",
+                    "{C:attention}escalado{} en {C:mult}+#2#{} Multi si la",
+                    "mano jugada contiene un {C:attention}Color{}",
                     "{C:inactive}(Actualmente {C:mult}+#3#{C:inactive} Multi)"
                 }
             },
             j_bof_j_rogue = {
                 name = "Pícaro",
                 text = {
-                    "Las cartas de palo {C:spades}Espada{}",
-                    "o {C:clubs}Trébol{} dan",
-                    "{C:money}$#1#{} al tenerlas en mano",
+                    "Las {C:spades}Espadas{}",
+                    "y {C:clubs}Trébol{} otorgan",
+                    "{C:money}$#1#{} si están en mano",
                     "al final de la ronda"
                 }
             },
@@ -163,62 +166,63 @@ return {
                 name = "Emmanuel E. \"Eureka\"",
                 text = {
                     {
-                        "Los {C:tarot}Paquetes Arcanos{} pueden contener",
-                        "{C:attention}consumibles{} de todos los tipos"
+                        "Los {C:tarot}Paquetes Arcanos{} pueden",
+                        "contener {C:attention}consumibles{} de",
+                        "todos los tipos"
                     },
                     {
-                        "Los {C:spectral}Paquetes Espectrales{} y {C:planet}Paquetes Celestiales{}",
-                        "pueden contener cartas del {C:tarot}Tarot{}"
+                        "Los {C:spectral}Paquetes Espectrales{}",
+                        "y {C:planet}Paquetes Celestiales pueden{}",
+                        "contener cartas del {C:tarot}Tarot{}"
                     },
                     {
-                        "Los {C:fish}Paquetes de Pescador{} siempre contienen",
-                        "{C:fish}Peces{} {C:white,X:big}Grandes{}"
+                        "Los {C:fish}Paquetes de Pescador{}",
+                        "siempre contienen {C:fish}Peces{} {C:white,X:big}Grandes{}"
                     }
                 }
             },
             j_bof_j_timmy = {
                 name = "Timoteo el Joven",
                 text = {
-                    "{C:blue}+#1#{} Ficha#<s>1# por cada",
+                    "{C:blue}+#1#{} Ficha#<s>2# por cada",
                     "carta por encima de {C:attention}#2#",
-                    "en tu baraja completa",
+                    "en tu baraja",
                     "{C:inactive}(Actualmente {C:blue}+#3#{C:inactive} Ficha#<s>3#)"
                 },
             },
             j_bof_j_gary = {
                 name = "Valerio el Viejito",
                 text = {
-                    "Este comodín gana {C:chips}+#1#{} Ficha#<s>1#",
-                    "cuando se vende un comodín,",
-                    "aumenta en {C:chips}+#2#{} Ficha#<s>2# cuando",
-                    "se derrota una {C:attention}Ciega Jefe{}",
+                    "Obtiene {C:chips}+#1#{} Ficha#<s>2# cuando",
+                    "se vende un comodín, aumenta",
+                    "en {C:chips}+#2#{} Ficha#<s>2# cuando al",
+                    "derrotar una {C:attention}Ciega Jefe{}",
                     "{C:inactive}(Actualmente {C:chips}+#3#{C:inactive} Ficha#<s>3#)"
                 }
             },
             j_bof_j_golden_sun = {
                 name = "Mr. Golden Sun",
                 text = {
-                    "Reduce a la mitad las {C:chips}Fichas{} y el {C:mult}Multi{} base",
-                    "{C:red}Destruye{} todas las cartas",
-                    "en la última mano de póker",
-                    "{C:attention}descartada{} de cada ronda"
+                    "Reduce a la mitad las {C:chips}Fichas{}",
+                    "y el {C:mult}Multi{} base {C:red}Destruye{} todas",
+                    "las cartas en el último mano",
+                    "{C:attention}descartada{} de la ronda"
                 }
             },
             j_bof_j_jack_frost = {
                 name = "Emilio Frío",
                 text = {
-                    "{C:mult}+#1#{} Multi si la",
-                    "{C:attention}mano de póker{} jugada",
-                    "no se ha jugado antes",
+                    "{C:mult}+#1#{} Multi si no has",
+                    "la {C:attention}mano{} anteriormente",
                     "en esta ronda"
                 }
             },
             j_bof_j_jim = {
                 name = "Fabio el Flaco",
                 text = {
-                    "{C:blue}+#1#{} mano por ronda",
-                    "{C:red}+#2#{} descarte cada ronda",
-                    "{C:attention}#3#{} de tamaño de mano"
+                    "{C:blue}+#1#{} mano",
+                    "{C:red}+#2#{} descarte",
+                    "{C:attention}#3#{} de tamaño de mano",
                 }
             },
             j_bof_j_gumphrey = {
@@ -235,13 +239,13 @@ return {
                 text = {
                     {
                         "Crea una carta del {C:tarot}Tarot{} si una",
-                        "carta con {C:purple}Sello Morado{}",
-                        "está en mano al final de la ronda",
+                        "carta con {C:purple}Sello Morado{} está en",
+                        "mano al final de la ronda",
                     },
                     {
-                        "Aumenta el nivel de la",
-                        "{C:attention}mano de póker{} descartada si la mano",
-                        "descartada contiene una carta con {C:blue}Sello Azul{}",
+                        "Aumenta el {C:planet}nivel{} de la {C:attention}mano{}",
+                        "descartada si la mano descartada contiene una",
+                        "carta con {C:blue}Sello Azul{}",
                     },
                 },
             },
@@ -256,11 +260,11 @@ return {
             j_bof_j_luminary = {
                 name = "Luminaria",
                 text = {
-                    "Gana {C:money}$#1#{} al final de la ronda",
-                    "Aumenta el pago en {C:money}$#2#{} por cada",
-                    "mano jugada que contiene una carta",
-                    "{C:attention}jugada{} y {C:attention}sin anotar{} con palo",
-                    "{C:hearts}Corazón{} o {C:diamonds}Diamante{} esta ronda"
+                    "Ganas {C:money}$#1#{} al final de la ronda",
+                    "y aumenta en {C:money}$#2#{} por cada",
+                    "mano jugada que contiene un {C:hearts}Corazón{} o {C:diamonds}Diamante{}",
+                    "{C:attention}sin anotar{}",
+                    "{C:inactive,s:0.8}(Se reinica al final de la ronda)",
                 }
             },
             j_bof_j_felix = {
@@ -268,14 +272,14 @@ return {
                 text = {
                     "Gana {C:money}$#1#{} al",
                     "final de la ronda",
-                    "No ganas {C:attention}intereses{}"
+                    "no ganas {C:money}intereses{}"
                 }
             },
             j_bof_j_larry = {
                 name = "Pelayo el Perezoso",
                 text = {
-                    "Gana {C:money}$#1#{} cuando",
-                    "se juega la {C:attention}primera{} o la {C:attention}última mano{}",
+                    "Ganas {C:money}$#1#{} cuando se juega la",
+                    "{C:attention}primera{} o la {C:attention}última mano{}",
                     "de la ronda"
                 }
             },
@@ -289,17 +293,17 @@ return {
             j_bof_j_frank = {
                 name = "Paolo Petimetre",
                 text = {
-                    "Crea una {C:attention}Etiqueta de Mano{} o",
-                    "una {C:attention}Etiqueta de Basura{} al azar",
-                    "al seleccionar una {C:small,E:1}Ciega Pequeña{}"
+                    "Crea una {C:attention}Etiqueta Manual{} o",
+                    "una {C:attention}Etiqueta de Basura{} al",
+                    "seleccionar una {C:small,E:1}Ciega Pequeña{}"
                 }
             },
             j_bof_j_crafted = {
                 name = "Comodín Artesanal",
                 text = {
-                    "Si la mano jugada es la {C:attention}primera{} mano",
-                    "de la ronda, copia todas las {C:attention}modificaciones{}",
-                    "de la carta del {C:attention}extremo izquierdo{} a la carta",
+                    "Al jugar la {C:attention}primera{} mano de la ronda",
+                    "copia todas las {C:attention}modificaciones{} de la",
+                    "carta del {C:attention}extremo izquierdo{} a la carta",
                     "del {C:attention}extremo derecho{} en la mano jugada,",
                     "luego {C:red}destruye{} la carta del extremo izquierdo"
                 }
@@ -307,39 +311,38 @@ return {
             j_bof_j_schlitzohr = {
                 name = "Schlitzohr",
                 text = {
-                    "Aleatoriza la {C:attention}categoría{} de",
-                    "las {C:attention}#1#{} cartas de categoría más baja",
-                    "en tu baraja",
-                    "al seleccionar una {C:attention}Ciega{}"
+                    "Cambia la {C:attention}categoría{} de las",
+                    "{C:attention}#1#{} cartas de menor categoría",
+                    "en tu baraja al seleccionar una {C:attention}Ciega{}",
                 }
             },
             j_bof_j_hotboxer = {
                 name = "Hotboxer",
                 text = {
                     {
-                        "{C:attention}+#1#{} ranura#<s>1# de tienda",
-                        "La ranura de tienda del {C:attention}extremo derecho{}",
-                        "contiene solo cartas del {C:tarot}Tarot{}"
+                        "{C:attention}+#1#{} ranura#<s>2# de tienda",
+                        "La tienda siempre tiene una del {C:tarot}Tarot{}",
+                        "en el {C:attention}extremo derecho{}"
                     },
                     {
-                        "Disminuye el {C:attention}valor de venta{} en {C:money}$#2#",
-                        "por cada carta del {C:tarot}Tarot{} comprada"
+                        "Pierde {C:money}$#2#{} {C:attention}valor de venta{}",
+                        "al comprar cartas del {C:tarot}Tarot{}"
                     }
                 }
             },
             j_bof_j_director = {
                 name = "Director",
                 text = {
-                    "{C:white,X:mult}X#1#{} Multi, reactiva",
-                    "{C:attention}una vez{} por cada carta en",
-                    "la mano jugada que se {C:attention}reactivó{}"
+                    "{C:white,X:mult}X#1#{} Multi, se reactiva",
+                    "{C:attention}una vez{} por cada carta",
+                    "jugada que se haya {C:attention}reactivado{}"
                 }
             },
             j_bof_j_zeke = {
                 name = "Zipper Zeke",
                 text = {
-                    "Probabilidad de {C:green}#1# en #2#{} de crear",
-                    "un comodín que no sea {C:common}Común{} cuando",
+                    "Prob. de {C:green}#1# en #2#{} de crear",
+                    "un comodín que no {C:common}Común{} cuando",
                     "se {C:attention}vende{} una carta del {C:tarot}Tarot{}",
                     "{C:inactive}(Debe haber espacio)"
                 }
@@ -347,9 +350,9 @@ return {
             j_bof_j_laughing_stock = {
                 name = "Hazmerreír",
                 text = {
-                    "Destruye cada carta jugada con",
+                    "{C:red}Destruye{} cada carta jugada con",
                     "un {C:attention}sello{} y disminuye permanentemente",
-                    "el requisito de puntuación del {C:attention}tipo de Ciega actual{}",
+                    "la puntuación requeirda del {C:attention}tipo de Ciega actual{}",
                     "en {C:attention}#1#%{} por carta",
                     "{C:inactive}(Multiplicativo)"
                 }
@@ -365,10 +368,14 @@ return {
             j_bof_j_pianoman = {
                 name = "Pianista",
                 text = {
-                    "Solo pueden aparecer comodines {C:common}Comunes{}",
-                    "en la tienda",
-                    "Puedes seleccionar cartas {C:attention}ilimitadas{}",
-                    "en {C:attention}Paquetes Potenciadores{}"
+                    {
+                        "Solo aparecen comodines",
+                        "{C:common}Comunes{} en la tienda",
+                    },
+                    {
+                        "Puedes tomar {C:attention}todas{} las cartas",
+                        "de los {C:attention}Paquetes Potenciadores{}"
+                    }
                 }
             },
             j_bof_n_notebook = {
@@ -376,30 +383,30 @@ return {
                 text = {
                     {
                         "Aplica un {C:dark_edition}sticker{} a",
-                        "un comodín aleatorio",
-                        "al seleccionar una {C:attention}Ciega{}"
+                        "un comodín al azar al",
+                        "seleccionar una {C:attention}Ciega{}"
                     },
                     {
                         "Elimina dos {C:dark_edition}stickers{}",
-                        "y gana {C:money}$#1#{}",
-                        "cuando se derrota una {C:attention}Ciega Jefe{}"
+                        "y gana {C:money}$#1#{} cuando se",
+                        "derrota la {C:attention}Ciega Jefe{}"
                     }
                 }
             },
             j_bof_n_eraser = {
                 name = "Borrador",
                 text = {
-                    "Todas las cartas en mano dan",
-                    "{C:mult}+#1#{} Multi pero {C:red}pierden{} cualquier",
-                    "{C:attention}modificación{} que tengan"
+                    "Todas las cartas en mano otorgan",
+                    "{C:mult}+#1#{} Multi pero {C:red}pierden{}",
+                    "sus {C:attention}modificadores{}"
                 }
             },
             j_bof_n_rummikub = {
                 name = "Ficha de Rummikub",
                 text = {
-                    "Este {C:attention}comodín{} gana {C:chips}+#1#{} Ficha#<s>1#",
-                    "si el {C:attention}valor total{} de fichas de",
-                    "las cartas jugadas es al menos {C:attention}#2#",
+                    "Obtiene {C:chips}+#1#{} Ficha#<s>2# si las",
+                    "{C:attention}fichas totales{} de las",
+                    "cartas jugadas es al menos {C:attention}#2#",
                     "{C:inactive}(Actualmente {C:chips}+#3#{C:inactive} Ficha#<s>3#)" 
                 }
             },
@@ -407,8 +414,8 @@ return {
                 name = "Pasaporte",
                 text = {
                     {
-                        "Este comodín gana {C:chips}+#1#{} Ficha#<s>1#",
-                        "por cada {C:attention}Ciega única{} derrotada",
+                        "Obtiene {C:chips}+#1#{} Ficha#<s>2# por cada",
+                        "{C:attention}Ciega única{} derrotada",
                         "{C:inactive}(Actualmente {C:chips}+#2#{C:inactive} Ficha#<s>2#)"
                     },
                     {
@@ -421,7 +428,7 @@ return {
                 name = "Despertador",
                 text = {
                     "{X:mult,C:white}X#1#{} Multi cada",
-                    "{C:attention}dos{} manos",
+                    "{C:attention}par{} de manos",
                     "{C:inactive}Inactivo...",
                 }
             },
@@ -429,15 +436,15 @@ return {
                 name = "Despertador",
                 text = {
                     "{X:mult,C:white}X#1#{} Multi cada",
-                    "{C:attention}dos{} manos",
+                    "{C:attention}par{} de manos",
                     "{C:inactive,E:bof_alarm}¡Activo!",
                 }
             },
             j_bof_f_narr = {
                 name = "Narr",
                 text = {
-                    "Este comodín gana {C:white,X:mult}X#1#{} Multi",
-                    "por cada {C:attention}carta{} de palo {V:1}#2#{}",
+                    "Gana {C:white,X:mult}X#1#{} Multi por cada",
+                    "{C:attention}carta{} de {V:1}#2#{}",
                     "en tu baraja al final de la ronda",
                     "{C:inactive}(Actualmente {C:white,X:mult}X#3#{C:inactive} Multi)"
                 },
@@ -460,9 +467,9 @@ return {
             j_bof_f_turold = {
                 name = "Turold",
                 text = {
-                    "Este comodín gana {C:white,X:mult}X#1#{} Multi",
-                    "cuando se juega una mano,",
-                    "se {C:attention}reinicia{} al final de la ronda",
+                    "Obtiene {C:white,X:mult}X#1#{} Multi",
+                    "cuando se juega una mano, se {C:attention}reinicia{}",
+                    "al final de la ronda",
                     "{C:inactive}(Actualmente {C:white,X:mult}X#2#{C:inactive} Multi)"
                 },
                 unlock = {
@@ -473,7 +480,7 @@ return {
                 name = "Taillefer",
                 text = {
                     "Llena las ranuras de {C:attention}consumibles{}",
-                    "con cartas {C:spectral}Espectrales{} aleatorias",
+                    "con cartas {C:spectral}Espectrales{} al azar",
                     "al seleccionar una {C:attention}Ciega{}"
                 },
                 unlock = {
@@ -496,12 +503,14 @@ return {
                 name = "Shennong",
                 text = {
                     {
-                        "La carta del {C:attention}fondo{} de la baraja se convierte en",
-                        "una {C:attention}Carta de la Suerte{} al seleccionar una {C:attention}Ciega{}",
+                        "La carta del {C:attention}fondo{} de la baraja",
+                        "se convierte en una {C:attention}Carta de la Suerte{}",
+                        "al seleccionar una {C:attention}Ciega{}",
                     },
                     {
-                        "Todas las {C:green,E:1}probabilidades{} {C:attention}listadas{} están",
-                        "{C:green}garantizadas{} durante la {C:attention}Ciega Jefe{}"
+                        "Todas las {C:green,E:1}probabilidades{} están",
+                        "{C:green}garantizadas{} durante la",
+                        "{C:attention}Ciega Jefe{}",
                     }
                 },
                 unlock = {
@@ -512,8 +521,9 @@ return {
                 name = "Nüwa y Fuxi",
                 text = {
                     {
-                        "Crea una carta del {C:tarot}Tarot{} aleatoria al seleccionar una {C:attention}Ciega{} y",
-                        "una carta del {C:tarot}Tarot{} {C:dark_edition}Negativa{} aleatoria al derrotar la {C:attention}Ciega{}",
+                        "Al esta en el extremo Izquierdo"
+                        "Crea una carta del {C:tarot}Tarot{} al azar al seleccionar una {C:attention}Ciega{} y",
+                        "una carta del {C:tarot}Tarot{} {C:dark_edition}Negativa{} al azar al derrotar una {C:attention}Ciega{}",
                         "si este es el comodín del {C:attention}extremo izquierdo{}",
                         "{C:inactive}(Debe haber espacio)"
                     },
@@ -532,11 +542,11 @@ return {
             b_bof_l_embroidered = {
                 name = "Baraja Bordada",
                 text = {
-                    "Empieza con una {C:attention}categoría{} aleatoria",
-                    "ausente de la baraja",
+                    "Empiezas con una {C:attention}categoría{}",
+                    "al azar ausente.",
                     "Al derrotar una {C:attention}Ciega Jefe{},",
-                    "añade {C:attention}4{} cartas a la baraja con cada",
-                    "{C:attention}palo{} de una {C:attention}categoría{} aleatoria",
+                    "añade {C:attention}4{} cartas a la baraja de cada",
+                    "{C:attention}palo{} de una {C:attention}categoría{} al azar",
                     "{C:inactive,s:0.8}(ej.: {C:attention,s:0.8}K de Espadas{C:inactive,s:0.8}, {C:attention,s:0.8}Corazones{C:inactive,s:0.8}, {C:attention,s:0.8}Tréboles{C:inactive,s:0.8} y {C:attention,s:0.8}Diamantes{C:inactive,s:0.8})"
                 },
                 unlock = {
@@ -557,7 +567,7 @@ return {
             b_bof_l_illusion = {
                 name = "Baraja de Ilusión",
                 text = {
-                    "Cuando se derrota una {C:attention}Ciega Jefe{},",
+                    "Cuando se derrota una {C:attention}Ciega Jefe{}",
                     "aumenta las manos o descartes",
                     "en {C:plasma}+#1#{} para la siguiente {C:attention}Apuesta{}"
                 },
@@ -570,24 +580,22 @@ return {
             b_bof_l_fossilized = {
                 name = "Baraja Fosilizada",
                 text = {
-                    "Gana {C:money}$#1#{} adicional al",
-                    "final de la ronda por cada {C:attention}consumible{} en mano",
-                    "Los {C:attention}consumibles{} de la tienda pueden",
-                    "ser {C:dark_edition}Negativos{} en raras ocasiones"
+                    "Ganas {C:money}+$#1#{} adicionales al final de",
+                    "la ronda por cada {C:attention}consumible{}",
+                    "que tengas. Los {C:attention}consumibles{}",
+                    "en la tienda pueden ser {C:dark_edition}Negativos{}"
                 },
                 unlock = {
-                    "Ten uno de cada",
-                    "{C:attention}tipo de consumible base{}",
+                    "Ten un consumible cada tipo",
                     "en las ranuras de consumibles"
                 }
             },
             b_bof_l_wooden = {
                 name = "Baraja de Madera",
                 text = {
-                    "Empieza sin {C:attention}Ases{}",
-                    "y con una categoría completa",
-                    "adicional de {C:attention}2s{}, {C:attention}3s{},",
-                    "{C:attention}4s{} y {C:attention}5s{}"
+                    "Empiezas sin {C:attention}Ases{} y con un",
+                    "grupo de {C:attention}2, {C:attention}3,",
+                    "{C:attention}4{} y {C:attention}5{} adicionales"
                 },
                 unlock = {
                     "Destruye {C:attention}4 Ases{}",
@@ -597,10 +605,10 @@ return {
             b_bof_l_backgammon = {
                 name = "Baraja Backgammon",
                 text = {
-                    "Convierte cada carta anotada de palo",
-                    "{C:spades}Espada{} o {C:clubs}Trébol{} en palo {C:hearts}Corazón{}",
-                    "o {C:diamonds}Diamante{} y viceversa",
-                    "No tiene efecto si las ranuras de comodín están llenas"
+                    "Convierte las {C:spades}Espadas{} o {C:clubs}Treboles{}",
+                    "{C:hearts}Corazones{} o {C:diamonds}Diamantes{} y viceversa",
+                    "{s:0.8}No tiene efecto si las ranuras{}",
+                    "{s:0.8}de comodín están llenas{}",
                 },
                 unlock = {
                     "Ten exactamente {C:attention}10{} cartas de",
@@ -611,11 +619,11 @@ return {
                 name = "Baraja Retro",
                 text = {
                     "Aumenta el nivel de",
-                    "{C:attention}#1#{} manos de {C:attention}póker{} aleatorias",
+                    "{C:attention}#1#{} manos de {C:attention}póker{} al azar",
                     "al omitir una {C:attention}Ciega{}"
                 },
                 unlock = {
-                    "Juega todas las {C:attention}manos de póker{}",
+                    "Juega todas las {C:attention}manos de póker",
                     "al menos una vez en una partida"
                 }
             },
@@ -631,29 +639,29 @@ return {
                 }
             },
             b_bof_l_display = {
-                name = "Baraja de Exhibición",
+                name = "Baraja Secuencial",
                 text = {
-                    "Empieza con todas las {C:attention}categorías{} de un {C:attention}palo{}",
-                    "Al derrotar una {C:attention}Ciega Jefe{},",
-                    "añade una copia de cada {C:attention}categoría{}",
-                    "de un {C:attention}palo{} aleatorio a la baraja"
+                    "Empiezas con todos los {C:attention}rangos{} de un {C:attention}palo{}",
+                    "Cuando se derrota una {C:attention}Ciega Jefe{},",
+                    "añade una copia de cada {C:attention}rango",
+                    "de un {C:attention}palo{} aleatorio al mazo"
                 },
                 unlock = {
-                    "Ten solo una",
-                    "{C:attention}categoría{} en la baraja"
+                    "Ten sólo una",
+                    "{C:attention}Categoría{} en tu baraja"
                 }
             },
             b_bof_l_lightning = {
                 name = "Baraja de Rayo",
                 text = {
-                    "Las cartas de {C:attention}Figura{} empiezan",
-                    "como {C:attention}Cartas Multi{}",
-                    "Las cartas jugadas no dan",
-                    "sus {C:attention}fichas base{} al anotar"
+                    "{C:attention}Cartas{} de Figura empiezan",
+                    "como {C:attention}Cartas de Multi{}",
+                    "Las cartas jugadas no anotan",
+                    "sus {C:chips}fichas base{}"
                 },
                 unlock = {
-                    "Gana una partida",
-                    "sin ningún {C:mult}Multi{},",
+                    "Gana una partida sin usar",
+                    "ninguna fuente de {C:mult}+Multi{},",
                     "{C:white,s:0.8,X:mult}XMulti{s:0.8} aún puede usarse"
                 }
             }
@@ -662,73 +670,73 @@ return {
             c_bof_i_bass_s = {
                 name = "Perca Americana {X:small}Pequeña",
                 text = {
-                    "{C:chips}+#1#{} Fichas y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "{C:chips}+#1#{} Fichas",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_betta_s = {
                 name = "Betta {X:small}Pequeño",
                 text = {
-                    "{C:mult}+#1#{} Multi y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "{C:mult}+#1#{} Multi",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_trout_s = {
                 name = "Trucha Arcoíris {X:small}Pequeña",
                 text = {
-                    "{C:white,X:mult}X#1#{} Multi y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "{C:white,X:mult}X#1#{} Multi",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_goldfish_s = {
                 name = "Pez Dorado {X:small}Pequeño",
                 text = {
-                    "Gana {C:money}$#1#{} y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "Gana {C:money}$#1#{}",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_bass_b = {
                 name = "Perca Americana {X:big}Grande",
                 text = {
-                    "{C:chips}+#1#{} Fichas y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "{C:chips}+#1#{} Fichas",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_betta_b = {
                 name = "Betta {X:big}Grande",
                 text = {
-                    "{C:mult}+#1#{} Multi y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "{C:mult}+#1#{} Multi",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_trout_b = {
                 name = "Trucha Arcoíris {X:big}Grande",
                 text = {
-                    "{C:white,X:mult}X#1#{} Multi y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "{C:white,X:mult}X#1#{} Multi",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_goldfish_b = {
                 name = "Pez Dorado {X:big}Grande",
                 text = {
-                    "Gana {C:money}$#1#{} y",
-                    "{C:attention}+#2#{} ranura#<s>2# de consumible mientras se posea",
-                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#..."
+                    "Gana {C:money}$#1#{}",
+                    "{C:inactive}#3# ronda#<s>3# restante#<s>3#...",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 }
             },
             c_bof_i_bass_l = {
                 name = "Perca Americana {X:legendary}Legendaria",
                 text = {
-                    "Da {C:chips}+Fichas{} iguales al número {C:attention}total{}",
-                    "de fichas que suman {C:attention}todas las cartas{} de la baraja,",
-                    "{C:attention}+#1#{} ranura#<s>1# de consumible mientras se posea"
+                    "Otorga {C:chips}+Fichas{} iguales a la suma {C:attention}total{}",
+                    "de fichas {C:attention}todas las cartas{} de tu baraja,",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 },
                 unlock = {
                     "{E:1,s:1.3}?????",
@@ -737,10 +745,10 @@ return {
             c_bof_i_betta_l = {
                 name = "Betta {X:legendary}Legendario",
                 text = {
-                    "Da {C:mult}+Multi{} igual al",
-                    "Multi {C:attention}total{} que suman todas las",
-                    "{C:attention}manos de póker{} visibles,",
-                    "{C:attention}+#1#{} ranura#<s>1# de consumible mientras se posea"
+                    "Otorga {C:mult}+Multi{} igual al Multi {C:attention}total{}",
+                    "que suman todas las {C:attention}manos de póker{}",
+                    "visibles en la mano jugada",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 },
                 unlock = {
                     "{E:1,s:1.3}?????",
@@ -749,9 +757,9 @@ return {
             c_bof_i_trout_l = {
                 name = "Trucha Arcoíris {X:legendary}Legendaria",
                 text = {
-                    "Los comodines y {C:attention}otros{} consumibles",
-                    "dan {C:white,X:mult}X#1#{} Multi cada uno,",
-                    "{C:attention}+#2#{} ranura de consumible mientras se posea"
+                    "Los Comodines y {C:attention}otros{} consumibles",
+                    "otorgan {C:white,X:mult}X#1#{} Multi",
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 },
                 unlock = {
                     "{E:1,s:1.3}?????",
@@ -760,10 +768,10 @@ return {
             c_bof_i_goldfish_l = {
                 name = "Pez Dorado {X:legendary}Legendario",
                 text = {
-                    "Gana dinero igual a la",
-                    "{C:attention}cantidad actual{} de {C:attention}interés{}",
+                    "Otorga dinero igual al {C:money}interés{}",
+                    "{C:attention}cantidad actual{} de",
                     "que se ganaría,",
-                    "{C:attention}+#1#{} ranura#<s>1# de consumible mientras se posea"
+                    "{C:attention,s:0.8}+#1#{} {C:inactive,s:0.8}ranura#<s>2# de consumible mientras se posea{}",
                 },
                 unlock = {
                     "{E:1,s:1.3}?????",
@@ -775,28 +783,28 @@ return {
                 name = "Paquete de Pescador",
                 text = {
                     "Escoge {C:attention}#1#{} de hasta",
-                    "{C:attention}#2# cartas {C:fish}Pez{}"
+                    "{C:attention}#2# cartas{} de {C:fish}Pez{}"
                 }
             },
             p_bof_i_tackle_jumbo = {
                 name = "Paquete de Pescador Jumbo",
                 text = {
                     "Escoge {C:attention}#1#{} de hasta",
-                    "{C:attention}#2# cartas {C:fish}Pez{}"
+                    "{C:attention}#2# cartas{} de {C:fish}Pez{}"
                 }
             },
             p_bof_i_fry = {
                 name = "Paquete Frito",
                 text = {
                     "Escoge {C:attention}#1#{} de hasta",
-                    "{C:attention}#2# cartas {C:fish}Pez{} {C:white,X:small}Pequeño{}"
+                    "{C:attention}#2# cartas{} de {C:fish}Pez{} {C:white,X:small}Pequeño{}"
                 }
             },
             p_bof_i_hooked = {
                 name = "Paquete de Cebo",
                 text = {
                     "Escoge {C:attention}#1#{} de hasta",
-                    "{C:attention}#2# cartas {C:fish}Pez{} {C:white,X:big}Grande{}"
+                    "{C:attention}#2# cartas{} de {C:fish}Pez{} {C:white,X:big}Grande{}"
                 }
             },
             k_bof_perkeo_legendary = {
@@ -839,7 +847,7 @@ return {
             option_bof_jesters = "Bufones",
             option_bof_normalities = "Normalidades",
             option_bof_fables = "Fábulas",
-            option_bof_flats = "Barajas",
+            option_bof_flats = "Planicies",
             option_bof_fish = "Peces",
             -- option_bof_enemies = "Enemies",
             -- option_bof_finishers = "Finishers",
