@@ -521,16 +521,17 @@ return {
                 name = "Nüwa y Fuxi",
                 text = {
                     {
-                        "Al esta en el extremo Izquierdo"
+                        "Al estar en el extremo Izquierdo",
                         "Crea una carta del {C:tarot}Tarot{} al azar al seleccionar una {C:attention}Ciega{} y",
                         "una carta del {C:tarot}Tarot{} {C:dark_edition}Negativa{} al azar al derrotar una {C:attention}Ciega{}",
                         "si este es el comodín del {C:attention}extremo izquierdo{}",
-                        "{C:inactive}(Debe haber espacio)"
+                        "{C:inactive}(Debe haber espacio)",
                     },
                     {
-                        "Crea una carta {C:fish}Pez{} {C:white,X:small}Pequeño{} aleatoria al seleccionar una {C:attention}Ciega{}",
+                        "Al estar en el extremo derecho",
+                        "Crea una carta {C:fish}Pez{} {C:white,X:small}Pequeño{} al azar al seleccionar una {C:attention}Ciega{}",
                         "y una carta {C:fish}Pez{} {C:white,X:big}Grande{} aleatoria al derrotar la {C:attention}Ciega{}",
-                        "si este es el comodín del {C:attention}extremo derecho{}"
+                        "si este es el comodín del {C:attention}extremo derecho{}",
                     }
                 },
                 unlock = {
